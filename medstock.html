@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MedStock — Smart medication management by Main Square.">
+    <title>MedStock — Main Square</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+    <div id="lang-toggle" class="lang-toggle">
+        <button id="btn-en" class="lang-btn active" onclick="setLang('en')">EN</button>
+        <span class="lang-sep">|</span>
+        <button id="btn-pt" class="lang-btn" onclick="setLang('pt')">PT</button>
+    </div>
+
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/logo.svg" alt="Main Square" class="logo-img">
+            </a>
+            <button class="nav-menu-btn" id="navMenuBtn" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" data-en="Home" data-pt="Início">Home</a></li>
+                <li><a href="apps.html" class="active" data-en="Our Apps" data-pt="Aplicações">Our Apps</a></li>
+                <li><a href="services.html" data-en="Approach" data-pt="Abordagem">Approach</a></li>
+                <li><a href="about.html" data-en="About" data-pt="Sobre">About</a></li>
+                <li><a href="contact.html" data-en="Contact" data-pt="Contacto">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="section-tag" data-en="Featured App" data-pt="App em Destaque">Featured App</div>
+                <h1>MedStock</h1>
+                <p data-en="Smart medication management for households. Built with privacy first: your data stays on your device." data-pt="Gestão inteligente de medicação para o agregado familiar. Construída com privacidade em primeiro lugar: os seus dados ficam no seu dispositivo.">Smart medication management for households. Built with privacy first: your data stays on your device.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="app-showcase featured">
+                <div class="app-showcase-content">
+                    <div class="app-header">
+                        <img src="assets/apps/medstock/app_icon.png" alt="MedStock icon" style="width:72px; height:72px; border-radius:16px; border:1px solid rgba(255,255,255,0.15);">
+                        <div>
+                            <h2>MedStock</h2>
+                            <p class="app-tagline" data-en="Medication inventory, reminders and expiry alerts" data-pt="Inventário de medicamentos, lembretes e alertas de validade">Medication inventory, reminders and expiry alerts</p>
+                        </div>
+                    </div>
+
+                    <div class="app-features-list">
+                        <div class="feature-item"><span>✅</span><span data-en="Medicine inventory with photos, quantity and dosage" data-pt="Inventário de medicamentos com foto, quantidade e dosagem">Medicine inventory with photos, quantity and dosage</span></div>
+                        <div class="feature-item"><span>✅</span><span data-en="Smart reminders for doses and expiration dates" data-pt="Lembretes inteligentes para tomas e validades">Smart reminders for doses and expiration dates</span></div>
+                        <div class="feature-item"><span>✅</span><span data-en="Usage history and stock tracking" data-pt="Histórico de utilização e controlo de stock">Usage history and stock tracking</span></div>
+                        <div class="feature-item"><span>✅</span><span data-en="Encrypted backups" data-pt="Backups encriptados">Encrypted backups</span></div>
+                        <div class="feature-item"><span>✅</span><span data-en="100% local-first data storage" data-pt="Armazenamento 100% local">100% local-first data storage</span></div>
+                    </div>
+
+                    <div class="legal-links-grid">
+                        <a href="legal/medstock/privacy.html" class="legal-link-card">
+                            <strong data-en="Privacy Policy (EN/PT)" data-pt="Política de Privacidade (EN/PT)">Privacy Policy (EN/PT)</strong>
+                            <span data-en="MedStock-specific legal page" data-pt="Página legal específica da MedStock">MedStock-specific legal page</span>
+                        </a>
+                        <a href="legal/medstock/terms.html" class="legal-link-card">
+                            <strong data-en="Terms & Legal Notices (EN/PT)" data-pt="Termos e Avisos Legais (EN/PT)">Terms & Legal Notices (EN/PT)</strong>
+                            <span data-en="Health and liability disclaimers" data-pt="Avisos de saúde e responsabilidade">Health and liability disclaimers</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="app-showcase-visual">
+                    <div class="app-real-preview">
+                        <img src="assets/apps/medstock/feature_graphic_1024x500.png" alt="MedStock official feature graphic">
+                        <p class="app-preview-note" data-en="Official MedStock graphic. Send screenshots if you want this page to match the app UI exactly." data-pt="Imagem oficial da MedStock. Envie screenshots se quiser que esta página reflita exatamente a UI da app.">Official MedStock graphic. Send screenshots if you want this page to match the app UI exactly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/logo.svg" alt="Main Square" class="footer-logo">
+                    <p data-en="Independent app publisher based in Lisbon, Portugal." data-pt="Publicadora independente de aplicações sediada em Lisboa, Portugal.">Independent app publisher based in Lisbon, Portugal.</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-en="Company" data-pt="Empresa">Company</h4>
+                    <ul>
+                        <li><a href="index.html" data-en="Home" data-pt="Início">Home</a></li>
+                        <li><a href="apps.html" data-en="Our Apps" data-pt="Aplicações">Our Apps</a></li>
+                        <li><a href="services.html" data-en="Approach" data-pt="Abordagem">Approach</a></li>
+                        <li><a href="about.html" data-en="About" data-pt="Sobre">About</a></li>
+                        <li><a href="contact.html" data-en="Contact" data-pt="Contacto">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 data-en="Legal" data-pt="Legal">Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html" data-en="Website Privacy" data-pt="Privacidade do Site">Website Privacy</a></li>
+                        <li><a href="terms.html" data-en="Website Terms" data-pt="Termos do Site">Website Terms</a></li>
+                        <li><a href="legal/medstock/privacy.html">MedStock Privacy</a></li>
+                        <li><a href="legal/medstock/terms.html">MedStock Terms</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 data-en="Contact" data-pt="Contacto">Contact</h4>
+                    <p><a href="mailto:geral@mainsquare.pt">geral@mainsquare.pt</a></p>
+                    <p data-en="Lisbon, Portugal" data-pt="Lisboa, Portugal">Lisbon, Portugal</p>
+                    <p>NIPC: 519226666</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Main Square, Unipessoal, Lda. <span data-en="All rights reserved." data-pt="Todos os direitos reservados.">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
