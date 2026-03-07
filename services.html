@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services — Main Square</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+    <div id="lang-toggle" class="lang-toggle">
+        <button id="btn-en" class="lang-btn active" onclick="setLang('en')">EN</button>
+        <span class="lang-sep">|</span>
+        <button id="btn-pt" class="lang-btn" onclick="setLang('pt')">PT</button>
+    </div>
+
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/logo.svg" alt="Main Square" class="logo-img">
+            </a>
+            <button class="nav-menu-btn" id="navMenuBtn">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" data-en="Home" data-pt="Início">Home</a></li>
+                <li><a href="apps.html" data-en="Our Apps" data-pt="Aplicações">Our Apps</a></li>
+                <li><a href="services.html" class="active" data-en="Services" data-pt="Serviços">Services</a></li>
+                <li><a href="about.html" data-en="About" data-pt="Sobre">About</a></li>
+                <li><a href="contact.html" data-en="Contact" data-pt="Contacto">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="section-tag" data-en="What We Do" data-pt="O Que Fazemos">What We Do</div>
+                <h1 data-en="Mobile-first development<br>tailored to your needs" data-pt="Desenvolvimento mobile<br>à medida das suas necessidades">Mobile-first development<br>tailored to your needs</h1>
+                <p data-en="We specialize in building native iOS and Android applications that users love." data-pt="Especializamo-nos em criar aplicações nativas iOS e Android que os utilizadores adoram.">We specialize in building native iOS and Android applications that users love.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 4L4 10L16 16L28 10L16 4Z" stroke="url(#grad1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4 22L16 28L28 22" stroke="url(#grad1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4 16L16 22L28 16" stroke="url(#grad1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <defs>
+                                <linearGradient id="grad1" x1="4" y1="4" x2="28" y2="28">
+                                    <stop offset="0%" stop-color="#6366f1"/>
+                                    <stop offset="100%" stop-color="#8b5cf6"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3 data-en="iOS Development" data-pt="Desenvolvimento iOS">iOS Development</h3>
+                    <p data-en="Native iOS apps built with Swift and SwiftUI. We leverage the latest Apple technologies to create fast, beautiful, and maintainable applications." data-pt="Aplicações iOS nativas construídas com Swift e SwiftUI. Aproveitamos as mais recentes tecnologias Apple para criar aplicações rápidas, bonitas e sustentáveis.">Native iOS apps built with Swift and SwiftUI. We leverage the latest Apple technologies to create fast, beautiful, and maintainable applications.</p>
+                    <ul style="list-style: none; padding: 0; margin-top: 16px; display: flex; flex-direction: column; gap: 8px;">
+                        <li style="display: flex; align-items: center; gap: 8px;">
+                            <span style="color: var(--color-accent);">•</span>
+                            <span data-en="SwiftUI & UIKit expertise" data-pt="Experiência em SwiftUI e UIKit">SwiftUI & UIKit expertise</span>
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 8px;">
+                            <span style="color: var(--color-accent);">•</span>
+                            <span data-en="iOS 15+ support" data-pt="Suporte para iOS 15+">iOS 15+ support</span>
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 8px;">
+                            <span style="color: var(--color-accent);">•</span>
+                            <span data-en="Core Data & CloudKit" data-pt="Core Data e CloudKit">Core Data & CloudKit</span>
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 8px;">
+                            <span style="color: var(--color-accent);">•</span>
+                            <span data-en="App Store optimization" data-pt="Otimização para App Store">App Store optimization</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <rect x="5" y="4" width="22" height="24" rx="2" stroke="url(#grad2)" stroke-width="2"/>
+                            <path d="M5 9H27" stroke="url(#grad2)" stroke-width="2"/>
+                            <defs>
+                                <linearGradient id="grad2" x1="5" y1="4" x2="27" y2="28">
+                                    <stop offset="0%" stop-color="#3b82f6"/>
+                                    <stop offset="100%" stop-color="#06b6d4"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3 data-en="Android Development" data-pt="Desenvolvimento Android">Android Development</h3>
+                    <p data-en="Modern Android apps using Kotlin and Jetpack Compose. Material Design 3, robust architecture, and seamless user experiences." data-pt="Aplicações Android modernas usando Kotlin e Jetpack Compose. Material Design 3, arquitetura robusta e experiências de utilizador fluidas.">Modern Android apps using Kotlin and Jetpack Compose. Material Design 3, robust architecture, and seamless user experiences.</p>
+                    <ul style="list-style: none; padding: 0; margin-top: 16px; display: flex; flex-direction: column; gap: 8px;">
+                        <li style="display: flex; align-items: center; gap: 8px;">
+                            <span style="color: var(--color-accent-blue);">•</span>
+                            <span data-en="Kotlin & Jetpack Compose" data-pt="Kotlin e Jetpack Compose">Kotlin & Jetpack Compose</span>
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 8px;">
+                            <span style="color: var(--color-accent-blue);">•</span>
+                            <span data-en="Material Design 3" data-pt="Material Design 3">Material Design 3</span>
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 8px;">
+                            <span style="color: var(--color-accent-blue);">•</span>
+                            <span data-en="Room & Hilt DI" data-pt="Room e Hilt DI">Room & Hilt DI</span>
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 8px;">
+                            <span style="color: var(--color-accent-blue);">•</span>
+                            <span data-en="Play Console expertise" data-pt="Experiência com Play Console">Play Console expertise</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <circle cx="16" cy="16" r="12" stroke="url(#grad3)" stroke-width="2"/>
+                            <path d="M16 8V16L22 19" stroke="url(#grad3)" stroke-width="2" stroke-linecap="round"/>
+                            <defs>
+                                <linearGradient id="grad3" x1="4" y1="4" x2="28" y2="28">
+                                    <stop offset="0%" stop-color="#10b981"/>
+                                    <stop offset="100%" stop-color="#059669"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3 data-en="Cross-Platform" data-pt="Multiplataforma">Cross-Platform</h3>
+                    <p data-en="Flutter applications for iOS and Android from a single codebase. Perfect for MVPs and faster time-to-market without compromising quality." data-pt="Aplicações Flutter para iOS e Android a partir de uma única base de código. Perfeito para MVPs e lançamento mais rápido sem comprometer a qualidade.">Flutter applications for iOS and Android from a single codebase. Perfect for MVPs and faster time-to-market without compromising quality.</p>
+                    <ul style="list-style: none; padding: 0; margin-top: 16px; display: flex; flex-direction: column; gap: 8px;">
+                        <li style="display: flex; align-items: center; gap: 8px;">
+                            <span style="color: var(--color-accent-green);">•</span>
+                            <span data-en="Single codebase" data-pt="Código único">Single codebase</span>
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 8px;">
+                            <span style="color: var(--color-accent-green);">•</span>
+                            <span data-en="Faster development" data-pt="Desenvolvimento mais rápido">Faster development</span>
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 8px;">
+                            <span style="color: var(--color-accent-green);">•</span>
+                            <span data-en="Native performance" data-pt="Performance nativa">Native performance</span>
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 8px;">
+                            <span style="color: var(--color-accent-green);">•</span>
+                            <span data-en="Hot reload & productivity" data-pt="Hot reload e produtividade">Hot reload & productivity</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M28 16C28 22.6274 22.6274 28 16 28C9.37258 28 4 22.6274 4 16C4 9.37258 9.37258 4 16 4" stroke="url(#grad4)" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M16 4C22.6274 4 28 9.37258 28 16" stroke="url(#grad4)" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="16" cy="16" r="4" stroke="url(#grad4)" stroke-width="2"/>
+                            <defs>
+                                <linearGradient id="grad4" x1="4" y1="4" x2="28" y2="28">
+                                    <stop offset="0%" stop-color="#f59e0b"/>
+                                    <stop offset="100%" stop-color="#d97706"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3 data-en="UX/UI Design" data-pt="Design UX/UI">UX/UI Design</h3>
+                    <p data-en="User-centered design that prioritizes simplicity and functionality. We create interfaces that are intuitive, accessible, and delightful to use." data-pt="Design centrado no utilizador que prioriza simplicidade e funcionalidade. Criamos interfaces intuitivas, acessíveis e agradáveis de usar.">User-centered design that prioritizes simplicity and functionality. We create interfaces that are intuitive, accessible, and delightful to use.</p>
+                    <ul style="list-style: none; padding: 0; margin-top: 16px; display: flex; flex-direction: column; gap: 8px;">
+                        <li style="display: flex; align-items: center; gap: 8px;">
+                            <span style="color: var(--color-accent-orange);">•</span>
+                            <span data-en="Figma prototyping" data-pt="Prototipagem em Figma">Figma prototyping</span>
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 8px;">
+                            <span style="color: var(--color-accent-orange);">•</span>
+                            <span data-en="User research" data-pt="Pesquisa de utilizador">User research</span>
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 8px;">
+                            <span style="color: var(--color-accent-orange);">•</span>
+                            <span data-en="Accessibility first" data-pt="Acessibilidade em primeiro">Accessibility first</span>
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 8px;">
+                            <span style="color: var(--color-accent-orange);">•</span>
+                            <span data-en="Design systems" data-pt="Sistemas de design">Design systems</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section cta-section">
+        <div class="container">
+            <h2 class="gradient-text" data-en="Ready to start your project?" data-pt="Pronto para iniciar o seu projeto?">Ready to start your project?</h2>
+            <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto 32px; color: var(--color-text-secondary);" data-en="Let's discuss how we can help bring your mobile app idea to life." data-pt="Vamos discutir como podemos ajudar a dar vida à sua ideia de aplicação mobile.">Let's discuss how we can help bring your mobile app idea to life.</p>
+            <a href="contact.html" class="btn btn-primary">
+                <span data-en="Get in Touch" data-pt="Entre em Contacto">Get in Touch</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/logo.svg" alt="Main Square" class="footer-logo">
+                    <p data-en="Independent software studio based in Lisbon, Portugal." data-pt="Estúdio independente de software sediado em Lisboa, Portugal.">Independent software studio based in Lisbon, Portugal.</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-en="Company" data-pt="Empresa">Company</h4>
+                    <ul>
+                        <li><a href="index.html" data-en="Home" data-pt="Início">Home</a></li>
+                        <li><a href="apps.html" data-en="Our Apps" data-pt="Aplicações">Our Apps</a></li>
+                        <li><a href="services.html" data-en="Services" data-pt="Serviços">Services</a></li>
+                        <li><a href="about.html" data-en="About" data-pt="Sobre">About</a></li>
+                        <li><a href="contact.html" data-en="Contact" data-pt="Contacto">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 data-en="Legal" data-pt="Legal">Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html" data-en="Privacy Policy" data-pt="Política de Privacidade">Privacy Policy</a></li>
+                        <li><a href="terms.html" data-en="Terms of Service" data-pt="Termos de Serviço">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 data-en="Contact" data-pt="Contacto">Contact</h4>
+                    <p><a href="mailto:geral@mainsquare.pt">geral@mainsquare.pt</a></p>
+                    <p data-en="Lisbon, Portugal" data-pt="Lisboa, Portugal">Lisbon, Portugal</p>
+                    <p>NIPC: 519226666</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Main Square, Unipessoal, Lda. <span data-en="All rights reserved." data-pt="Todos os direitos reservados.">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Main Square</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+    <div id="lang-toggle" class="lang-toggle">
+        <button id="btn-en" class="lang-btn active" onclick="setLang('en')">EN</button>
+        <span class="lang-sep">|</span>
+        <button id="btn-pt" class="lang-btn" onclick="setLang('pt')">PT</button>
+    </div>
+
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/logo.svg" alt="Main Square" class="logo-img">
+            </a>
+            <button class="nav-menu-btn" id="navMenuBtn">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" data-en="Home" data-pt="Início">Home</a></li>
+                <li><a href="apps.html" data-en="Our Apps" data-pt="Aplicações">Our Apps</a></li>
+                <li><a href="services.html" data-en="Services" data-pt="Serviços">Services</a></li>
+                <li><a href="about.html" data-en="About" data-pt="Sobre">About</a></li>
+                <li><a href="contact.html" class="active" data-en="Contact" data-pt="Contacto">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="section-tag" data-en="Get in Touch" data-pt="Entre em Contacto">Get in Touch</div>
+                <h1 data-en="Let's build something<br>amazing together" data-pt="Vamos criar algo<br>incrível juntos">Let's build something<br>amazing together</h1>
+                <p data-en="Have a project in mind? Want to discuss an app idea? We'd love to hear from you." data-pt="Tem um projeto em mente? Quer discutir uma ideia de app? Queremos ouvir de si.">Have a project in mind? Want to discuss an app idea? We'd love to hear from you.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;">
+                <div>
+                    <h2 style="font-size: 2rem; margin-bottom: 24px;" data-en="Contact Information" data-pt="Informação de Contacto">Contact Information</h2>
+                    <div style="margin-bottom: 32px;">
+                        <div style="display: flex; gap: 16px; margin-bottom: 24px;">
+                            <div style="width: 48px; height: 48px; background: var(--gradient-primary); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M3 8L10.89 13.26C11.2187 13.4793 11.6049 13.5963 12 13.5963C12.3951 13.5963 12.7813 13.4793 13.11 13.26L21 8M5 19H19C19.5304 19 20.0391 18.7893 20.4142 18.4142C20.7893 18.0391 21 17.5304 21 17V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 style="margin-bottom: 8px;">Email</h3>
+                                <a href="mailto:geral@mainsquare.pt" style="color: var(--color-text-secondary);">geral@mainsquare.pt</a>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 16px; margin-bottom: 24px;">
+                            <div style="width: 48px; height: 48px; background: var(--gradient-blue); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="white" stroke-width="2"/>
+                                    <circle cx="12" cy="10" r="3" stroke="white" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 style="margin-bottom: 8px;" data-en="Location" data-pt="Localização">Location</h3>
+                                <p style="color: var(--color-text-secondary);" data-en="Lisbon, Portugal" data-pt="Lisboa, Portugal">Lisbon, Portugal</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding: 24px; background: rgba(18, 18, 26, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--radius-lg);">
+                        <h3 style="margin-bottom: 16px;" data-en="Company Details" data-pt="Detalhes da Empresa">Company Details</h3>
+                        <p style="font-size: 0.9rem; color: var(--color-text-secondary); margin-bottom: 8px;">Main Square, Unipessoal, Lda.</p>
+                        <p style="font-size: 0.9rem; color: var(--color-text-secondary);">NIPC: 519226666</p>
+                    </div>
+                </div>
+                <div>
+                    <form id="contactForm" style="display: flex; flex-direction: column; gap: 20px;">
+                        <div>
+                            <label style="display: block; margin-bottom: 8px; font-size: 0.9rem; font-weight: 500;" data-en="Name" data-pt="Nome">Name</label>
+                            <input type="text" id="name" required style="width: 100%; padding: 14px 16px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--radius-sm); color: var(--color-text); font-family: 'Inter', sans-serif; font-size: 0.95rem;">
+                        </div>
+                        <div>
+                            <label style="display: block; margin-bottom: 8px; font-size: 0.9rem; font-weight: 500;">Email</label>
+                            <input type="email" id="email" required style="width: 100%; padding: 14px 16px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--radius-sm); color: var(--color-text); font-family: 'Inter', sans-serif; font-size: 0.95rem;">
+                        </div>
+                        <div>
+                            <label style="display: block; margin-bottom: 8px; font-size: 0.9rem; font-weight: 500;" data-en="Message" data-pt="Mensagem">Message</label>
+                            <textarea id="message" required rows="6" style="width: 100%; padding: 14px 16px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--radius-sm); color: var(--color-text); font-family: 'Inter', sans-serif; font-size: 0.95rem; resize: vertical;"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="justify-content: center;">
+                            <span data-en="Send Message" data-pt="Enviar Mensagem">Send Message</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/logo.svg" alt="Main Square" class="footer-logo">
+                    <p data-en="Independent software studio based in Lisbon, Portugal." data-pt="Estúdio independente de software sediado em Lisboa, Portugal.">Independent software studio based in Lisbon, Portugal.</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-en="Company" data-pt="Empresa">Company</h4>
+                    <ul>
+                        <li><a href="index.html" data-en="Home" data-pt="Início">Home</a></li>
+                        <li><a href="apps.html" data-en="Our Apps" data-pt="Aplicações">Our Apps</a></li>
+                        <li><a href="services.html" data-en="Services" data-pt="Serviços">Services</a></li>
+                        <li><a href="about.html" data-en="About" data-pt="Sobre">About</a></li>
+                        <li><a href="contact.html" data-en="Contact" data-pt="Contacto">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 data-en="Legal" data-pt="Legal">Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html" data-en="Privacy Policy" data-pt="Política de Privacidade">Privacy Policy</a></li>
+                        <li><a href="terms.html" data-en="Terms of Service" data-pt="Termos de Serviço">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 data-en="Contact" data-pt="Contacto">Contact</h4>
+                    <p><a href="mailto:geral@mainsquare.pt">geral@mainsquare.pt</a></p>
+                    <p data-en="Lisbon, Portugal" data-pt="Lisboa, Portugal">Lisbon, Portugal</p>
+                    <p>NIPC: 519226666</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Main Square, Unipessoal, Lda. <span data-en="All rights reserved." data-pt="Todos os direitos reservados.">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

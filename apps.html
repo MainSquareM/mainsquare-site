@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Our Apps — Explore the mobile applications created by Main Square.">
+    <title>Our Apps — Main Square</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+    <!-- Language Toggle -->
+    <div id="lang-toggle" class="lang-toggle">
+        <button id="btn-en" class="lang-btn active" onclick="setLang('en')">EN</button>
+        <span class="lang-sep">|</span>
+        <button id="btn-pt" class="lang-btn" onclick="setLang('pt')">PT</button>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/logo.svg" alt="Main Square" class="logo-img">
+            </a>
+            <button class="nav-menu-btn" id="navMenuBtn" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" data-en="Home" data-pt="Início">Home</a></li>
+                <li><a href="apps.html" class="active" data-en="Our Apps" data-pt="Aplicações">Our Apps</a></li>
+                <li><a href="services.html" data-en="Services" data-pt="Serviços">Services</a></li>
+                <li><a href="about.html" data-en="About" data-pt="Sobre">About</a></li>
+                <li><a href="contact.html" data-en="Contact" data-pt="Contacto">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="section-tag" data-en="Our Portfolio" data-pt="Nosso Portfólio">Our Portfolio</div>
+                <h1 data-en="Apps that solve<br>real-world problems" data-pt="Apps que resolvem<br>problemas reais">Apps that solve<br>real-world problems</h1>
+                <p data-en="We create mobile applications that make a difference in people's daily lives. Every app is designed with purpose, built with care, and polished to perfection." data-pt="Criamos aplicações móveis que fazem a diferença no dia a dia das pessoas. Cada app é desenhada com propósito, construída com cuidado e polida à perfeição.">We create mobile applications that make a difference in people's daily lives. Every app is designed with purpose, built with care, and polished to perfection.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured App - MedStock -->
+    <section class="section">
+        <div class="container">
+            <div class="app-showcase featured">
+                <div class="app-showcase-content">
+                    <div class="app-badge" data-en="Featured App" data-pt="App em Destaque">Featured App</div>
+                    <div class="app-header">
+                        <div class="app-icon-large">💊</div>
+                        <div>
+                            <h2>MedStock</h2>
+                            <p class="app-tagline" data-en="Smart medication management" data-pt="Gestão inteligente de medicação">Smart medication management</p>
+                        </div>
+                    </div>
+                    <p class="app-description" data-en="Never forget to take your medication or let it expire again. MedStock is the complete solution to manage household medications simply and effectively." data-pt="Nunca mais se esqueça de tomar os medicamentos ou das suas validades. MedStock é a solução completa para gerir os medicamentos que tem em casa, de forma simples e eficaz.">Never forget to take your medication or let it expire again. MedStock is the complete solution to manage household medications simply and effectively.</p>
+                    
+                    <div class="app-features-list">
+                        <div class="feature-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 11L12 14L22 4" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M21 12V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H16" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span data-en="Medicine inventory with photos and dosages" data-pt="Inventário de medicamentos com fotos e dosagens">Medicine inventory with photos and dosages</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 11L12 14L22 4" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M21 12V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H16" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span data-en="Smart alerts for expiration dates and doses" data-pt="Alertas inteligentes de validades e tomas">Smart alerts for expiration dates and doses</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 11L12 14L22 4" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M21 12V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H16" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span data-en="Stock control and quantity tracking" data-pt="Controle de stock e quantidades">Stock control and quantity tracking</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 11L12 14L22 4" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M21 12V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H16" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span data-en="Complete history and reports" data-pt="Histórico completo e relatórios">Complete history and reports</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 11L12 14L22 4" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M21 12V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H16" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span data-en="100% offline — all data stays on your device" data-pt="100% offline — dados ficam no dispositivo">100% offline — all data stays on your device</span>
+                        </div>
+                    </div>
+
+                    <div class="app-platforms">
+                        <div class="platform-pill">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.09997 22C7.78997 22.05 6.79997 20.68 5.95997 19.47C4.24997 17 2.93997 12.45 4.69997 9.39C5.56997 7.87 7.12997 6.91 8.81997 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
+                            </svg>
+                            iOS
+                        </div>
+                        <div class="platform-pill">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.523 15.3414C17.5146 15.3414 15.4787 16.3297 15.4787 18.9414C15.4787 22.0297 18.3146 23.1997 18.3313 23.1997C18.3229 23.208 17.9062 24.708 16.8062 26.2497C15.8313 27.583 14.8146 28.9164 13.2396 28.9164C11.6646 28.9164 11.2479 27.9997 9.43126 27.9997C7.61459 27.9997 6.88959 28.9164 5.43959 28.9164C3.98959 28.9164 2.99792 27.6997 1.90625 26.1997C0.589584 24.408 -0.468749 21.208 0.239583 18.6247C0.881249 16.4997 2.70625 15.0664 4.70625 15.058C6.23959 15.058 7.56459 16.0997 8.48959 16.0997C9.41459 16.0997 10.998 14.9414 12.7646 15.133C13.5813 15.1747 15.7646 15.4414 17.523 17.4914C17.523 17.4914 17.5313 17.4914 17.523 15.3414ZM12.0645 12.7915C12.8145 11.8499 13.3229 10.5415 13.1562 9.24988C11.9979 9.32488 10.623 10.0999 9.83118 11.0915C9.13951 11.9582 8.51451 13.2749 8.68951 14.5665C9.97285 14.6582 11.298 13.8165 12.0645 12.7915Z"/>
+                            </svg>
+                            Android
+                        </div>
+                    </div>
+
+                    <div class="app-status">
+                        <div class="status-badge in-development">
+                            <span class="status-dot"></span>
+                            <span data-en="In Development" data-pt="Em Desenvolvimento">In Development</span>
+                        </div>
+                        <p class="status-text" data-en="Coming soon to the App Store and Google Play" data-pt="Brevemente na App Store e Google Play">Coming soon to the App Store and Google Play</p>
+                    </div>
+
+                    <div class="app-cta">
+                        <a href="medstock.html" class="btn btn-primary">
+                            <span data-en="Learn More About MedStock" data-pt="Saber Mais Sobre MedStock">Learn More About MedStock</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="app-showcase-visual">
+                    <div class="phone-mockup-3d">
+                        <div class="phone-frame">
+                            <div class="phone-notch"></div>
+                            <div class="phone-screen">
+                                <div class="medstock-ui">
+                                    <div class="ms-header-bar">
+                                        <span class="ms-title">MedStock</span>
+                                        <span class="ms-icon-header">💊</span>
+                                    </div>
+                                    <div class="ms-med-card">
+                                        <div class="ms-pill-icon green"></div>
+                                        <div class="ms-med-info">
+                                            <div class="ms-med-name">Paracetamol</div>
+                                            <div class="ms-med-dose">500mg · 12 units</div>
+                                        </div>
+                                        <div class="ms-status-ok">✓</div>
+                                    </div>
+                                    <div class="ms-med-card">
+                                        <div class="ms-pill-icon blue"></div>
+                                        <div class="ms-med-info">
+                                            <div class="ms-med-name">Ibuprofen</div>
+                                            <div class="ms-med-dose">400mg · 3 units</div>
+                                        </div>
+                                        <div class="ms-status-warn">!</div>
+                                    </div>
+                                    <div class="ms-med-card">
+                                        <div class="ms-pill-icon purple"></div>
+                                        <div class="ms-med-info">
+                                            <div class="ms-med-name">Vitamin D</div>
+                                            <div class="ms-med-dose">1000IU · 28 units</div>
+                                        </div>
+                                        <div class="ms-status-ok">✓</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coming Soon Section -->
+    <section class="section coming-soon-section">
+        <div class="container">
+            <div class="section-header center">
+                <div class="section-tag" data-en="What's Next" data-pt="Próximos Projetos">What's Next</div>
+                <h2 data-en="More apps in the pipeline" data-pt="Mais apps a caminho">More apps in the pipeline</h2>
+                <p data-en="We're constantly working on new ideas and solutions. Stay tuned for upcoming releases." data-pt="Estamos constantemente a trabalhar em novas ideias e soluções. Fique atento aos próximos lançamentos.">We're constantly working on new ideas and solutions. Stay tuned for upcoming releases.</p>
+            </div>
+            <div class="coming-soon-grid">
+                <div class="coming-soon-card">
+                    <div class="coming-soon-icon">🚀</div>
+                    <h3 data-en="ProductivityTools" data-pt="Ferramentas de Produtividade">Productivity Tools</h3>
+                    <p data-en="Simple, effective tools to boost your daily productivity." data-pt="Ferramentas simples e eficazes para aumentar a produtividade diária.">Simple, effective tools to boost your daily productivity.</p>
+                </div>
+                <div class="coming-soon-card">
+                    <div class="coming-soon-icon">🏠</div>
+                    <h3 data-en="Home Management" data-pt="Gestão Doméstica">Home Management</h3>
+                    <p data-en="Organize your household with intelligent management apps." data-pt="Organize a sua casa com apps de gestão inteligentes.">Organize your household with intelligent management apps.</p>
+                </div>
+                <div class="coming-soon-card">
+                    <div class="coming-soon-icon">📚</div>
+                    <h3 data-en="Education & Learning" data-pt="Educação & Aprendizagem">Education & Learning</h3>
+                    <p data-en="Apps designed to make learning engaging and effective." data-pt="Apps projetadas para tornar a aprendizagem envolvente e eficaz.">Apps designed to make learning engaging and effective.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section-alt">
+        <div class="container">
+            <div class="cta-alt-content">
+                <h2 data-en="Have an app idea?" data-pt="Tem uma ideia para uma app?">Have an app idea?</h2>
+                <p data-en="We'd love to hear from you. Let's build something great together." data-pt="Adoraríamos ouvir de si. Vamos criar algo fantástico juntos.">We'd love to hear from you. Let's build something great together.</p>
+                <a href="contact.html" class="btn btn-primary">
+                    <span data-en="Contact Us" data-pt="Contacte-nos">Contact Us</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/logo.svg" alt="Main Square" class="footer-logo">
+                    <p data-en="Independent software studio based in Lisbon, Portugal." data-pt="Estúdio independente de software sediado em Lisboa, Portugal.">Independent software studio based in Lisbon, Portugal.</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-en="Company" data-pt="Empresa">Company</h4>
+                    <ul>
+                        <li><a href="index.html" data-en="Home" data-pt="Início">Home</a></li>
+                        <li><a href="apps.html" data-en="Our Apps" data-pt="Aplicações">Our Apps</a></li>
+                        <li><a href="services.html" data-en="Services" data-pt="Serviços">Services</a></li>
+                        <li><a href="about.html" data-en="About" data-pt="Sobre">About</a></li>
+                        <li><a href="contact.html" data-en="Contact" data-pt="Contacto">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 data-en="Legal" data-pt="Legal">Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html" data-en="Privacy Policy" data-pt="Política de Privacidade">Privacy Policy</a></li>
+                        <li><a href="terms.html" data-en="Terms of Service" data-pt="Termos de Serviço">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 data-en="Contact" data-pt="Contacto">Contact</h4>
+                    <p><a href="mailto:geral@mainsquare.pt">geral@mainsquare.pt</a></p>
+                    <p data-en="Lisbon, Portugal" data-pt="Lisboa, Portugal">Lisbon, Portugal</p>
+                    <p>NIPC: 519226666</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Main Square, Unipessoal, Lda. <span data-en="All rights reserved." data-pt="Todos os direitos reservados.">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

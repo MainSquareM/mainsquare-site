@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — Main Square</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+    <div id="lang-toggle" class="lang-toggle">
+        <button id="btn-en" class="lang-btn active" onclick="setLang('en')">EN</button>
+        <span class="lang-sep">|</span>
+        <button id="btn-pt" class="lang-btn" onclick="setLang('pt')">PT</button>
+    </div>
+
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/logo.svg" alt="Main Square" class="logo-img">
+            </a>
+            <button class="nav-menu-btn" id="navMenuBtn">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" data-en="Home" data-pt="Início">Home</a></li>
+                <li><a href="apps.html" data-en="Our Apps" data-pt="Aplicações">Our Apps</a></li>
+                <li><a href="services.html" data-en="Services" data-pt="Serviços">Services</a></li>
+                <li><a href="about.html" class="active" data-en="About" data-pt="Sobre">About</a></li>
+                <li><a href="contact.html" data-en="Contact" data-pt="Contacto">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="section-tag" data-en="About Us" data-pt="Sobre Nós">About Us</div>
+                <h1 data-en="Building software with<br>purpose and precision" data-pt="Construir software com<br>propósito e precisão">Building software with<br>purpose and precision</h1>
+                <p data-en="Main Square is an independent software studio based in Lisbon, Portugal, dedicated to creating exceptional mobile applications." data-pt="A Main Square é um estúdio de software independente sediado em Lisboa, Portugal, dedicado a criar aplicações móveis excecionais.">Main Square is an independent software studio based in Lisbon, Portugal, dedicated to creating exceptional mobile applications.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-bottom: 80px;">
+                <div>
+                    <h2 style="font-size: 2.5rem; margin-bottom: 24px;" data-en="Our Mission" data-pt="A Nossa Missão">Our Mission</h2>
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--color-text-secondary); margin-bottom: 20px;" data-en="We believe that great software should be simple, intuitive, and built to last. Our mission is to create mobile applications that solve real problems and enhance people's daily lives." data-pt="Acreditamos que um bom software deve ser simples, intuitivo e construído para durar. A nossa missão é criar aplicações móveis que resolvem problemas reais e melhoram o dia a dia das pessoas.">We believe that great software should be simple, intuitive, and built to last. Our mission is to create mobile applications that solve real problems and enhance people's daily lives.</p>
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--color-text-secondary);" data-en="By focusing on native technologies and timeless design principles, we deliver products that stand the test of time." data-pt="Ao focar em tecnologias nativas e princípios de design atemporais, entregamos produtos que resistem ao teste do tempo.">By focusing on native technologies and timeless design principles, we deliver products that stand the test of time.</p>
+                </div>
+                <div style="height: 400px; background: var(--gradient-primary); border-radius: var(--radius-xl); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+                    <svg viewBox="0 0 400 400" style="width: 70%; height: 70%;">
+                        <defs>
+                            <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:rgba(255,255,255,0.9)"/>
+                                <stop offset="100%" style="stop-color:rgba(255,255,255,0.6)"/>
+                            </linearGradient>
+                        </defs>
+                        <path d="M200 80 L320 200 L200 320 L80 200 Z" fill="url(#logoGrad)"/>
+                        <circle cx="200" cy="200" r="20" fill="rgba(255,255,255,0.9)"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+                <div style="height: 400px; background: var(--gradient-blue); border-radius: var(--radius-xl); display: flex; align-items: center; justify-content: center;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 5rem; font-weight: 900; background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.6)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">2025</div>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 1.2rem; margin-top: 8px;" data-en="Founded" data-pt="Fundada">Founded</p>
+                    </div>
+                </div>
+                <div>
+                    <h2 style="font-size: 2.5rem; margin-bottom: 24px;" data-en="Our Story" data-pt="A Nossa História">Our Story</h2>
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--color-text-secondary); margin-bottom: 20px;" data-en="Main Square was founded in 2025 with a clear vision: to build mobile applications that prioritize user experience and long-term value over fleeting trends." data-pt="A Main Square foi fundada em 2025 com uma visão clara: construir aplicações móveis que priorizam a experiência do utilizador e o valor a longo prazo em vez de tendências passageiras.">Main Square was founded in 2025 with a clear vision: to build mobile applications that prioritize user experience and long-term value over fleeting trends.</p>
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--color-text-secondary);" data-en="Based in Lisbon, Portugal, we leverage the city's vibrant tech ecosystem and creative energy to develop innovative solutions for users worldwide." data-pt="Sediados em Lisboa, Portugal, aproveitamos o vibrante ecossistema tecnológico e a energia criativa da cidade para desenvolver soluções inovadoras para utilizadores em todo o mundo.">Based in Lisbon, Portugal, we leverage the city's vibrant tech ecosystem and creative energy to develop innovative solutions for users worldwide.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: rgba(18, 18, 26, 0.3);">
+        <div class="container">
+            <h2 class="gradient-text" style="text-align: center; margin-bottom: 60px;" data-en="Our Values" data-pt="Os Nossos Valores">Our Values</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3 data-en="Simplicity" data-pt="Simplicidade">Simplicity</h3>
+                    <p data-en="We believe the best solutions are often the simplest ones. We remove unnecessary complexity to create intuitive experiences." data-pt="Acreditamos que as melhores soluções são muitas vezes as mais simples. Removemos complexidade desnecessária para criar experiências intuitivas.">We believe the best solutions are often the simplest ones. We remove unnecessary complexity to create intuitive experiences.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-en="Quality" data-pt="Qualidade">Quality</h3>
+                    <p data-en="Every line of code, every design decision, every user interaction is crafted with attention to detail and commitment to excellence." data-pt="Cada linha de código, cada decisão de design, cada interação do utilizador é elaborada com atenção ao detalhe e compromisso com a excelência.">Every line of code, every design decision, every user interaction is crafted with attention to detail and commitment to excellence.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-en="Privacy" data-pt="Privacidade">Privacy</h3>
+                    <p data-en="User privacy is not negotiable. We build applications that respect user data and provide transparency in how information is handled." data-pt="A privacidade do utilizador não é negociável. Construímos aplicações que respeitam os dados do utilizador e proporcionam transparência na forma como a informação é tratada.">User privacy is not negotiable. We build applications that respect user data and provide transparency in how information is handled.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-en="Longevity" data-pt="Longevidade">Longevity</h3>
+                    <p data-en="We design for the long term. Our applications are built on solid foundations that can evolve and adapt as technology advances." data-pt="Desenhamos para o longo prazo. As nossas aplicações são construídas sobre bases sólidas que podem evoluir e adaptar-se à medida que a tecnologia avança.">We design for the long term. Our applications are built on solid foundations that can evolve and adapt as technology advances.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section cta-section">
+        <div class="container">
+            <h2 class="gradient-text" data-en="Want to work with us?" data-pt="Quer trabalhar connosco?">Want to work with us?</h2>
+            <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto 32px; color: var(--color-text-secondary);" data-en="We're always interested in hearing about new projects and opportunities." data-pt="Estamos sempre interessados em ouvir sobre novos projetos e oportunidades.">We're always interested in hearing about new projects and opportunities.</p>
+            <a href="contact.html" class="btn btn-primary">
+                <span data-en="Get in Touch" data-pt="Entre em Contacto">Get in Touch</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/logo.svg" alt="Main Square" class="footer-logo">
+                    <p data-en="Independent software studio based in Lisbon, Portugal." data-pt="Estúdio independente de software sediado em Lisboa, Portugal.">Independent software studio based in Lisbon, Portugal.</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-en="Company" data-pt="Empresa">Company</h4>
+                    <ul>
+                        <li><a href="index.html" data-en="Home" data-pt="Início">Home</a></li>
+                        <li><a href="apps.html" data-en="Our Apps" data-pt="Aplicações">Our Apps</a></li>
+                        <li><a href="services.html" data-en="Services" data-pt="Serviços">Services</a></li>
+                        <li><a href="about.html" data-en="About" data-pt="Sobre">About</a></li>
+                        <li><a href="contact.html" data-en="Contact" data-pt="Contacto">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 data-en="Legal" data-pt="Legal">Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html" data-en="Privacy Policy" data-pt="Política de Privacidade">Privacy Policy</a></li>
+                        <li><a href="terms.html" data-en="Terms of Service" data-pt="Termos de Serviço">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 data-en="Contact" data-pt="Contacto">Contact</h4>
+                    <p><a href="mailto:geral@mainsquare.pt">geral@mainsquare.pt</a></p>
+                    <p data-en="Lisbon, Portugal" data-pt="Lisboa, Portugal">Lisbon, Portugal</p>
+                    <p>NIPC: 519226666</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Main Square, Unipessoal, Lda. <span data-en="All rights reserved." data-pt="Todos os direitos reservados.">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

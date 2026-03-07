@@ -3,20 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Main Square — Independent software studio based in Portugal, specializing in native mobile solutions for iOS and Android.">
-    <meta name="keywords" content="Main Square, mobile development, iOS, Android, apps, Portugal, software studio">
-    <meta name="author" content="Main Square, Unipessoal, Lda.">
+    <meta name="description" content="Main Square — Independent software studio based in Portugal, creating native mobile apps for iOS and Android.">
     <title>Main Square — Mobile Software Studio</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Favicon -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 </head>
 <body>
     <!-- Language Toggle -->
-    <div id="lang-toggle" class="lang-toggle" title="Mudar idioma / Switch language">
+    <div id="lang-toggle" class="lang-toggle">
         <button id="btn-en" class="lang-btn active" onclick="setLang('en')">EN</button>
         <span class="lang-sep">|</span>
         <button id="btn-pt" class="lang-btn" onclick="setLang('pt')">PT</button>
@@ -25,288 +22,217 @@
     <!-- Navigation -->
     <nav id="navbar" class="navbar">
         <div class="nav-container">
-            <a href="#hero" class="nav-logo">
-                <span class="logo-icon">◼</span> Main Square
+            <a href="index.html" class="nav-logo">
+                <img src="assets/logo.svg" alt="Main Square" class="logo-img">
             </a>
             <button class="nav-menu-btn" id="navMenuBtn" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
             </button>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#about" data-en="About" data-pt="Sobre">About</a></li>
-                <li><a href="#services" data-en="Services" data-pt="Serviços">Services</a></li>
-                <li><a href="#portfolio" data-en="Portfolio" data-pt="Portfólio">Portfolio</a></li>
-                <li><a href="#process" data-en="Our Process" data-pt="Processo">Our Process</a></li>
-                <li><a href="#contact" data-en="Contact" data-pt="Contacto">Contact</a></li>
+                <li><a href="index.html" class="active" data-en="Home" data-pt="Início">Home</a></li>
+                <li><a href="apps.html" data-en="Our Apps" data-pt="Aplicações">Our Apps</a></li>
+                <li><a href="services.html" data-en="Services" data-pt="Serviços">Services</a></li>
+                <li><a href="about.html" data-en="About" data-pt="Sobre">About</a></li>
+                <li><a href="contact.html" data-en="Contact" data-pt="Contacto">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <div class="hero-content">
-            <h1 data-en="We build apps that<br>solve real problems." data-pt="Criamos apps que<br>resolvem problemas reais.">We build apps that<br>solve real problems.</h1>
-            <p class="hero-subtitle" data-en="Main Square is an independent software studio based in Portugal, specializing in native mobile solutions for iOS and Android." data-pt="A Main Square é um estúdio independente de software sediado em Portugal, especializado em soluções móveis nativas para iOS e Android.">Main Square is an independent software studio based in Portugal, specializing in native mobile solutions for iOS and Android.</p>
-            <div class="hero-cta">
-                <a href="#portfolio" class="btn btn-primary" data-en="View Our Work" data-pt="Ver Projetos">View Our Work</a>
-                <a href="#contact" class="btn btn-secondary" data-en="Get in Touch" data-pt="Contacte-nos">Get in Touch</a>
-            </div>
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-mesh"></div>
         </div>
-        <div class="hero-visual">
-            <div class="phone-mockup">
-                <div class="phone-screen">
-                    <div class="app-preview">
-                        <div class="app-header-mock">
-                            <span class="app-icon-mock">💊</span>
-                            <span>MedStock</span>
-                        </div>
-                        <div class="app-content-mock">
-                            <div class="mock-card"></div>
-                            <div class="mock-card short"></div>
-                            <div class="mock-card"></div>
-                        </div>
-                    </div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-badge" data-en="🇵🇹 Based in Lisbon, Portugal" data-pt="🇵🇹 Sediado em Lisboa, Portugal">🇵🇹 Based in Lisbon, Portugal</div>
+                <h1 class="hero-title">
+                    <span data-en="Building the future," data-pt="Construímos o futuro,">Building the future,</span><br>
+                    <span class="gradient-text" data-en="one app at a time." data-pt="uma app de cada vez.">one app at a time.</span>
+                </h1>
+                <p class="hero-subtitle" data-en="Main Square is an independent software studio specializing in native mobile solutions for iOS and Android. We transform complex ideas into intuitive, secure, and efficient digital experiences." data-pt="A Main Square é um estúdio independente de software especializado em soluções móveis nativas para iOS e Android. Transformamos ideias complexas em experiências digitais intuitivas, seguras e eficientes.">Main Square is an independent software studio specializing in native mobile solutions for iOS and Android. We transform complex ideas into intuitive, secure, and efficient digital experiences.</p>
+                <div class="hero-cta">
+                    <a href="apps.html" class="btn btn-primary">
+                        <span data-en="Explore Our Apps" data-pt="Ver Aplicações">Explore Our Apps</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="contact.html" class="btn btn-secondary" data-en="Get in Touch" data-pt="Fale Connosco">Get in Touch</a>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section about">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag" data-en="Who We Are" data-pt="Quem Somos">Who We Are</span>
-                <h2 data-en="Turning complex concepts into intuitive digital experiences." data-pt="Transformamos conceitos complexos em experiências digitais intuitivas.">Turning complex concepts into intuitive digital experiences.</h2>
-            </div>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p data-en="Main Square is an independent software development studio headquartered in Lisbon, Portugal. We specialize in creating native mobile solutions for the iOS and Android ecosystems." data-pt="A Main Square é um estúdio independente de desenvolvimento de software com sede em Lisboa, Portugal. Especializamo-nos na criação de soluções móveis nativas para os ecossistemas iOS e Android.">Main Square is an independent software development studio headquartered in Lisbon, Portugal. We specialize in creating native mobile solutions for the iOS and Android ecosystems.</p>
-                    <p data-en="Focused on the intersection of utility and technology, we are dedicated to transforming complex concepts into intuitive, secure, and efficient digital experiences. With a minimalist design philosophy and robust software architecture, Main Square prioritizes user privacy and practical functionality above all else." data-pt="Focados na interseção entre utilidade e tecnologia, dedicamo-nos a transformar conceitos complexos em experiências digitais intuitivas, seguras e eficientes. Com uma filosofia de design minimalista e uma arquitetura de software robusta, a Main Square prioriza a privacidade do utilizador e a funcionalidade prática acima de tudo.">Focused on the intersection of utility and technology, we are dedicated to transforming complex concepts into intuitive, secure, and efficient digital experiences. With a minimalist design philosophy and robust software architecture, Main Square prioritizes user privacy and practical functionality above all else.</p>
-                </div>
-                <div class="about-values">
-                    <div class="value-card">
-                        <div class="value-icon">🔒</div>
-                        <h3 data-en="Privacy First" data-pt="Privacidade Primeiro">Privacy First</h3>
-                        <p data-en="User data protection is at the core of every product we build. We collect only what's essential and keep everything secure." data-pt="A proteção dos dados do utilizador está no centro de cada produto que criamos. Recolhemos apenas o essencial e mantemos tudo seguro.">User data protection is at the core of every product we build. We collect only what's essential and keep everything secure.</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label" data-en="Native Code" data-pt="Código Nativo">Native Code</div>
                     </div>
-                    <div class="value-card">
-                        <div class="value-icon">✨</div>
-                        <h3 data-en="Minimalist Design" data-pt="Design Minimalista">Minimalist Design</h3>
-                        <p data-en="Clean interfaces, thoughtful interactions, and nothing unnecessary. Every element has a purpose." data-pt="Interfaces limpas, interações pensadas e nada desnecessário. Cada elemento tem um propósito.">Clean interfaces, thoughtful interactions, and nothing unnecessary. Every element has a purpose.</p>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-number">0</div>
+                        <div class="stat-label" data-en="Data Collected" data-pt="Dados Recolhidos">Data Collected</div>
                     </div>
-                    <div class="value-card">
-                        <div class="value-icon">⚡</div>
-                        <h3 data-en="Robust Architecture" data-pt="Arquitetura Robusta">Robust Architecture</h3>
-                        <p data-en="Built on solid foundations with native technologies to ensure performance, reliability, and long-term maintainability." data-pt="Construído sobre bases sólidas com tecnologias nativas para garantir desempenho, fiabilidade e manutenção a longo prazo.">Built on solid foundations with native technologies to ensure performance, reliability, and long-term maintainability.</p>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-en="Privacy" data-pt="Privacidade">Privacy</div>
+                        <div class="stat-label" data-en="First" data-pt="Primeiro">First</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="section services">
+    <!-- Why Main Square Section -->
+    <section class="section why-section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag" data-en="What We Do" data-pt="O Que Fazemos">What We Do</span>
-                <h2 data-en="End-to-end mobile development for iOS & Android." data-pt="Desenvolvimento móvel completo para iOS e Android.">End-to-end mobile development for iOS & Android.</h2>
+            <div class="section-header center">
+                <div class="section-tag" data-en="Why Choose Us" data-pt="Porquê Escolher-nos">Why Choose Us</div>
+                <h2 data-en="We don't just build apps.<br>We craft experiences." data-pt="Não apenas criamos apps.<br>Criamos experiências.">We don't just build apps.<br>We craft experiences.</h2>
             </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-number">01</div>
-                    <h3 data-en="iOS Development" data-pt="Desenvolvimento iOS">iOS Development</h3>
-                    <p data-en="Native iOS applications built with Swift and SwiftUI, following Apple's Human Interface Guidelines for a seamless user experience on iPhone and iPad." data-pt="Aplicações iOS nativas construídas com Swift e SwiftUI, seguindo as Human Interface Guidelines da Apple para uma experiência perfeita no iPhone e iPad.">Native iOS applications built with Swift and SwiftUI, following Apple's Human Interface Guidelines for a seamless user experience on iPhone and iPad.</p>
-                    <ul class="service-techs">
-                        <li>Swift</li>
-                        <li>SwiftUI</li>
-                        <li>UIKit</li>
-                        <li>Core Data</li>
-                    </ul>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon gradient-purple">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 data-en="Native Performance" data-pt="Desempenho Nativo">Native Performance</h3>
+                    <p data-en="Built with Swift and Kotlin for optimal performance. No compromises, no cross-platform limitations." data-pt="Construído com Swift e Kotlin para desempenho ideal. Sem compromissos, sem limitações cross-platform.">Built with Swift and Kotlin for optimal performance. No compromises, no cross-platform limitations.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-number">02</div>
-                    <h3 data-en="Android Development" data-pt="Desenvolvimento Android">Android Development</h3>
-                    <p data-en="Native Android applications developed with Kotlin and Jetpack Compose, adhering to Material Design principles for a consistent experience across Android devices." data-pt="Aplicações Android nativas desenvolvidas com Kotlin e Jetpack Compose, seguindo os princípios de Material Design para uma experiência consistente em dispositivos Android.">Native Android applications developed with Kotlin and Jetpack Compose, adhering to Material Design principles for a consistent experience across Android devices.</p>
-                    <ul class="service-techs">
-                        <li>Kotlin</li>
-                        <li>Jetpack Compose</li>
-                        <li>Room</li>
-                        <li>Material Design</li>
-                    </ul>
+                <div class="feature-card">
+                    <div class="feature-icon gradient-blue">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M7 11V7C7 4.79086 8.79086 3 11 3H13C15.2091 3 17 4.79086 17 7V11" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 data-en="Privacy First" data-pt="Privacidade Primeiro">Privacy First</h3>
+                    <p data-en="Local data storage, end-to-end encryption, zero tracking. Your users' privacy is our priority." data-pt="Armazenamento local de dados, encriptação ponta-a-ponta, zero tracking. A privacidade dos utilizadores é prioridade.">Local data storage, end-to-end encryption, zero tracking. Your users' privacy is our priority.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-number">03</div>
-                    <h3 data-en="UX/UI Design" data-pt="Design UX/UI">UX/UI Design</h3>
-                    <p data-en="User-centered design process from wireframes to polished interfaces. We create intuitive experiences that delight users while solving real-world problems." data-pt="Processo de design centrado no utilizador, desde wireframes a interfaces polidas. Criamos experiências intuitivas que encantam os utilizadores enquanto resolvem problemas reais.">User-centered design process from wireframes to polished interfaces. We create intuitive experiences that delight users while solving real-world problems.</p>
-                    <ul class="service-techs">
-                        <li>Figma</li>
-                        <li>Prototyping</li>
-                        <li>User Research</li>
-                        <li>Accessibility</li>
-                    </ul>
+                <div class="feature-card">
+                    <div class="feature-icon gradient-green">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <path d="M14 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V8L14 2Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M14 2V8H20" stroke="currentColor" stroke-width="2"/>
+                            <path d="M16 13H8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M16 17H8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M10 9H8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 data-en="Minimalist Design" data-pt="Design Minimalista">Minimalist Design</h3>
+                    <p data-en="Every pixel has a purpose. Clean interfaces that users love, with zero unnecessary elements." data-pt="Cada pixel tem um propósito. Interfaces limpas que os utilizadores adoram, sem elementos desnecessários.">Every pixel has a purpose. Clean interfaces that users love, with zero unnecessary elements.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-number">04</div>
-                    <h3 data-en="App Strategy & Consulting" data-pt="Estratégia & Consultoria">App Strategy & Consulting</h3>
-                    <p data-en="From concept validation to App Store optimization, we guide your project through every stage of the mobile app lifecycle." data-pt="Desde a validação de conceito até à otimização na App Store, guiamos o seu projeto em cada fase do ciclo de vida de uma aplicação móvel.">From concept validation to App Store optimization, we guide your project through every stage of the mobile app lifecycle.</p>
-                    <ul class="service-techs">
-                        <li>Market Analysis</li>
-                        <li>ASO</li>
-                        <li>App Store Review</li>
-                        <li>Analytics</li>
-                    </ul>
+                <div class="feature-card">
+                    <div class="feature-icon gradient-orange">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 data-en="Long-term Vision" data-pt="Visão de Longo Prazo">Long-term Vision</h3>
+                    <p data-en="We build sustainable products designed to last. Maintainability and scalability from day one." data-pt="Construímos produtos sustentáveis feitos para durar. Manutenibilidade e escalabilidade desde o início.">We build sustainable products designed to last. Maintainability and scalability from day one.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="section portfolio">
+    <!-- Tech Stack Section -->
+    <section class="section tech-section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag" data-en="Our Work" data-pt="Nossos Projetos">Our Work</span>
-                <h2 data-en="Apps that make a difference in everyday life." data-pt="Apps que fazem a diferença no dia a dia.">Apps that make a difference in everyday life.</h2>
+            <div class="section-header center">
+                <div class="section-tag" data-en="Technology" data-pt="Tecnologia">Technology</div>
+                <h2 data-en="Built with modern tools" data-pt="Construído com ferramentas modernas">Built with modern tools</h2>
             </div>
-            <div class="portfolio-showcase">
-                <div class="portfolio-item featured">
-                    <div class="portfolio-info">
-                        <span class="portfolio-badge" data-en="Featured Project" data-pt="Projeto em Destaque">Featured Project</span>
-                        <h3>MedStock</h3>
-                        <p class="portfolio-desc" data-en="An intelligent medication management solution that helps users track their medicine inventory, expiration dates, and dosage schedules. MedStock was designed with simplicity and privacy in mind — your health data stays on your device." data-pt="Uma solução inteligente de gestão de medicação que ajuda os utilizadores a controlar o seu inventário de medicamentos, datas de validade e horários de dosagem. O MedStock foi projetado com simplicidade e privacidade em mente — os seus dados de saúde ficam no seu dispositivo.">An intelligent medication management solution that helps users track their medicine inventory, expiration dates, and dosage schedules. MedStock was designed with simplicity and privacy in mind — your health data stays on your device.</p>
-                        <ul class="portfolio-features">
-                            <li data-en="📦 Medicine inventory tracking" data-pt="📦 Controlo de inventário de medicamentos">📦 Medicine inventory tracking</li>
-                            <li data-en="⏰ Expiration date alerts" data-pt="⏰ Alertas de data de validade">⏰ Expiration date alerts</li>
-                            <li data-en="📊 Dosage schedule management" data-pt="📊 Gestão de horários de dosagem">📊 Dosage schedule management</li>
-                            <li data-en="🔒 Local data storage — no cloud" data-pt="🔒 Armazenamento local — sem cloud">🔒 Local data storage — no cloud</li>
-                        </ul>
-                        <div class="portfolio-platforms">
-                            <span class="platform-badge" data-en="📱 iOS" data-pt="📱 iOS">📱 iOS</span>
-                            <span class="platform-badge" data-en="🤖 Android" data-pt="🤖 Android">🤖 Android</span>
-                        </div>
-                        <p class="portfolio-status" data-en="Status: In Development — Coming Soon to the App Store & Google Play" data-pt="Estado: Em Desenvolvimento — Brevemente na App Store e Google Play">Status: In Development — Coming Soon to the App Store & Google Play</p>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <div class="tech-logo">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <path d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z" fill="#FF9500"/>
+                            <path d="M28 16C26 14 22 14 20 16" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                            <path d="M18 24L24 18L30 24" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M24 18V32" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                        </svg>
                     </div>
-                    <div class="portfolio-visual">
-                        <div class="phone-mockup portfolio-phone">
-                            <div class="phone-screen">
-                                <div class="medstock-preview">
-                                    <div class="ms-header">
-                                        <span class="ms-title">MedStock</span>
-                                        <span class="ms-icon">💊</span>
-                                    </div>
-                                    <div class="ms-card">
-                                        <div class="ms-pill green"></div>
-                                        <div class="ms-text">
-                                            <div class="ms-name">Paracetamol</div>
-                                            <div class="ms-detail">500mg · 12 units</div>
-                                        </div>
-                                        <div class="ms-status ok">✓</div>
-                                    </div>
-                                    <div class="ms-card">
-                                        <div class="ms-pill blue"></div>
-                                        <div class="ms-text">
-                                            <div class="ms-name">Ibuprofen</div>
-                                            <div class="ms-detail">400mg · 3 units</div>
-                                        </div>
-                                        <div class="ms-status warn">!</div>
-                                    </div>
-                                    <div class="ms-card">
-                                        <div class="ms-pill orange"></div>
-                                        <div class="ms-text">
-                                            <div class="ms-name">Vitamin D</div>
-                                            <div class="ms-detail">1000IU · 28 units</div>
-                                        </div>
-                                        <div class="ms-status ok">✓</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="tech-name">Swift</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-logo">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <path d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z" fill="#7F52FF"/>
+                            <text x="24" y="30" font-family="monospace" font-size="16" font-weight="bold" fill="white" text-anchor="middle">K</text>
+                        </svg>
                     </div>
+                    <div class="tech-name">Kotlin</div>
                 </div>
-            </div>
-            <div class="portfolio-cta">
-                <p data-en="More projects are on the way. Stay tuned for new releases." data-pt="Mais projetos a caminho. Fique atento a novos lançamentos.">More projects are on the way. Stay tuned for new releases.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Process Section -->
-    <section id="process" class="section process">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag" data-en="How We Work" data-pt="Como Trabalhamos">How We Work</span>
-                <h2 data-en="A proven process from idea to launch." data-pt="Um processo comprovado, da ideia ao lançamento.">A proven process from idea to launch.</h2>
-            </div>
-            <div class="process-timeline">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <h3 data-en="Discovery" data-pt="Descoberta">Discovery</h3>
-                    <p data-en="We start by understanding the problem, the target audience, and the goals. Research, analysis, and concept validation form the foundation of every project." data-pt="Começamos por compreender o problema, o público-alvo e os objetivos. Pesquisa, análise e validação de conceito formam a base de cada projeto.">We start by understanding the problem, the target audience, and the goals. Research, analysis, and concept validation form the foundation of every project.</p>
+                <div class="tech-item">
+                    <div class="tech-logo">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <rect x="4" y="4" width="40" height="40" rx="8" fill="#007AFF"/>
+                            <text x="24" y="32" font-family="sans-serif" font-size="22" font-weight="bold" fill="white" text-anchor="middle">UI</text>
+                        </svg>
+                    </div>
+                    <div class="tech-name">SwiftUI</div>
                 </div>
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <h3 data-en="Design" data-pt="Design">Design</h3>
-                    <p data-en="Wireframes, prototypes, and visual design. We iterate until the interface is intuitive, accessible, and aligned with platform guidelines." data-pt="Wireframes, protótipos e design visual. Iteramos até que a interface seja intuitiva, acessível e alinhada com as guidelines da plataforma.">Wireframes, prototypes, and visual design. We iterate until the interface is intuitive, accessible, and aligned with platform guidelines.</p>
+                <div class="tech-item">
+                    <div class="tech-logo">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <rect x="4" y="4" width="40" height="40" rx="8" fill="#3DDC84"/>
+                            <text x="24" y="32" font-family="sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">JC</text>
+                        </svg>
+                    </div>
+                    <div class="tech-name">Jetpack Compose</div>
                 </div>
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <h3 data-en="Development" data-pt="Desenvolvimento">Development</h3>
-                    <p data-en="Native code, clean architecture, and thorough testing. We build with performance, security, and maintainability as top priorities." data-pt="Código nativo, arquitetura limpa e testes rigorosos. Construímos com desempenho, segurança e manutenibilidade como prioridades.">Native code, clean architecture, and thorough testing. We build with performance, security, and maintainability as top priorities.</p>
+                <div class="tech-item">
+                    <div class="tech-logo">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <rect x="4" y="4" width="40" height="40" rx="8" fill="#0ACF83"/>
+                            <path d="M16 14L32 24L16 34V14Z" fill="white"/>
+                        </svg>
+                    </div>
+                    <div class="tech-name">Flutter</div>
                 </div>
-                <div class="process-step">
-                    <div class="step-number">4</div>
-                    <h3 data-en="Launch & Support" data-pt="Lançamento & Suporte">Launch & Support</h3>
-                    <p data-en="App Store submission, launch support, and ongoing maintenance. We stay with you after release to ensure everything runs smoothly." data-pt="Submissão na App Store, suporte ao lançamento e manutenção contínua. Acompanhamos o projeto após o lançamento para garantir que tudo funciona bem.">App Store submission, launch support, and ongoing maintenance. We stay with you after release to ensure everything runs smoothly.</p>
+                <div class="tech-item">
+                    <div class="tech-logo">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <rect x="4" y="4" width="40" height="40" rx="8" fill="#1E3A8A"/>
+                            <path d="M12 18H36M12 24H36M12 30H36" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="tech-name">Core Data</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section contact">
+    <!-- CTA Section -->
+    <section class="section cta-section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag" data-en="Get in Touch" data-pt="Contacte-nos">Get in Touch</span>
-                <h2 data-en="Let's bring your idea to life." data-pt="Vamos dar vida à sua ideia.">Let's bring your idea to life.</h2>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <p class="contact-intro" data-en="Have a project in mind or want to learn more about our services? Drop us a line and we'll get back to you." data-pt="Tem um projeto em mente ou quer saber mais sobre os nossos serviços? Envie-nos uma mensagem e entraremos em contacto.">Have a project in mind or want to learn more about our services? Drop us a line and we'll get back to you.</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <span class="contact-icon">✉️</span>
-                            <div>
-                                <strong>Email</strong>
-                                <a href="mailto:geral@mainsquare.pt">geral@mainsquare.pt</a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-icon">📍</span>
-                            <div>
-                                <strong data-en="Location" data-pt="Localização">Location</strong>
-                                <span data-en="Lisbon, Portugal" data-pt="Lisboa, Portugal">Lisbon, Portugal</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="company-legal">
-                        <p>Main Square, Unipessoal, Lda.</p>
-                        <p>NIPC: 519226666</p>
-                    </div>
+            <div class="cta-card">
+                <div class="cta-content">
+                    <h2 data-en="Ready to build something amazing?" data-pt="Pronto para criar algo incrível?">Ready to build something amazing?</h2>
+                    <p data-en="Let's discuss your project and bring your vision to life." data-pt="Vamos discutir o seu projeto e dar vida à sua visão.">Let's discuss your project and bring your vision to life.</p>
+                    <a href="contact.html" class="btn btn-white">
+                        <span data-en="Contact Us" data-pt="Contacte-nos">Contact Us</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
                 </div>
-                <div class="contact-form-wrapper">
-                    <form id="contactForm" class="contact-form" action="https://formspree.io/f/placeholder" method="POST">
-                        <div class="form-group">
-                            <label for="name" data-en="Name" data-pt="Nome">Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message" data-en="Message" data-pt="Mensagem">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary" data-en="Send Message" data-pt="Enviar Mensagem">Send Message</button>
-                    </form>
+                <div class="cta-visual">
+                    <div class="floating-card card-1">
+                        <div class="card-icon">📱</div>
+                        <div class="card-text">iOS</div>
+                    </div>
+                    <div class="floating-card card-2">
+                        <div class="card-icon">🤖</div>
+                        <div class="card-text">Android</div>
+                    </div>
+                    <div class="floating-card card-3">
+                        <div class="card-icon">✨</div>
+                        <div class="card-text">Native</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -317,16 +243,17 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <span class="logo-icon">◼</span> <strong>Main Square</strong>
-                    <p data-en="Independent software studio based in Portugal." data-pt="Estúdio independente de software sediado em Portugal.">Independent software studio based in Portugal.</p>
+                    <img src="assets/logo.svg" alt="Main Square" class="footer-logo">
+                    <p data-en="Independent software studio based in Lisbon, Portugal." data-pt="Estúdio independente de software sediado em Lisboa, Portugal.">Independent software studio based in Lisbon, Portugal.</p>
                 </div>
                 <div class="footer-links">
                     <h4 data-en="Company" data-pt="Empresa">Company</h4>
                     <ul>
-                        <li><a href="#about" data-en="About" data-pt="Sobre">About</a></li>
-                        <li><a href="#services" data-en="Services" data-pt="Serviços">Services</a></li>
-                        <li><a href="#portfolio" data-en="Portfolio" data-pt="Portfólio">Portfolio</a></li>
-                        <li><a href="#contact" data-en="Contact" data-pt="Contacto">Contact</a></li>
+                        <li><a href="index.html" data-en="Home" data-pt="Início">Home</a></li>
+                        <li><a href="apps.html" data-en="Our Apps" data-pt="Aplicações">Our Apps</a></li>
+                        <li><a href="services.html" data-en="Services" data-pt="Serviços">Services</a></li>
+                        <li><a href="about.html" data-en="About" data-pt="Sobre">About</a></li>
+                        <li><a href="contact.html" data-en="Contact" data-pt="Contacto">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
@@ -335,6 +262,12 @@
                         <li><a href="privacy.html" data-en="Privacy Policy" data-pt="Política de Privacidade">Privacy Policy</a></li>
                         <li><a href="terms.html" data-en="Terms of Service" data-pt="Termos de Serviço">Terms of Service</a></li>
                     </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 data-en="Contact" data-pt="Contacto">Contact</h4>
+                    <p><a href="mailto:geral@mainsquare.pt">geral@mainsquare.pt</a></p>
+                    <p data-en="Lisbon, Portugal" data-pt="Lisboa, Portugal">Lisbon, Portugal</p>
+                    <p>NIPC: 519226666</p>
                 </div>
             </div>
             <div class="footer-bottom">
