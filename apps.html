@@ -150,17 +150,15 @@
 
                     <!-- Screenshots Carousel -->
                     <div style="margin-top: 3rem;">
-                        <h3 style="margin-bottom: 1.5rem;" data-en="App Screenshots" data-pt="Screenshots da App">App Screenshots</h3>
-                        <div class="carousel-wrapper">
-                            <button class="carousel-arrow carousel-prev" onclick="carouselScroll('screenshotsGalleryApps', -1)" aria-label="Previous">&#10094;</button>
-                            <div class="carousel-viewport">
-                                <img src="assets/apps/medstock/feature_graphic_1024x500.png" alt="MedStock official feature graphic" style="display: none;" id="fallbackImageApps">
-                                <div class="carousel-track" id="screenshotsGalleryApps">
-                                    <!-- Screenshots loaded dynamically -->
-                                </div>
+                        <h3 style="margin-bottom: 1rem;" data-en="App Screenshots" data-pt="Screenshots da App">App Screenshots</h3>
+                        <div class="ss-carousel" id="ssCarouselApps">
+                            <button class="ss-arrow ss-prev" onclick="ssScroll('ssTrackApps',-1)" aria-label="Previous">&#10094;</button>
+                            <div class="ss-viewport">
+                                <div class="ss-track" id="ssTrackApps"></div>
                             </div>
-                            <button class="carousel-arrow carousel-next" onclick="carouselScroll('screenshotsGalleryApps', 1)" aria-label="Next">&#10095;</button>
+                            <button class="ss-arrow ss-next" onclick="ssScroll('ssTrackApps',1)" aria-label="Next">&#10095;</button>
                         </div>
+                        <img src="assets/apps/medstock/feature_graphic_1024x500.png" alt="MedStock" style="display:none" id="fallbackImageApps">
                     </div>
                 </div>
             </div>
@@ -168,147 +166,148 @@
     </section>
 
     <!-- Lightbox overlay -->
+    <!-- Lightbox overlay -->
     <div class="lightbox-overlay" id="lightboxOverlay" onclick="closeLightbox()">
         <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
-        <button class="lightbox-arrow lightbox-prev" onclick="event.stopPropagation(); lightboxNav(-1)">&#10094;</button>
-        <div class="lightbox-content" onclick="event.stopPropagation()">
+        <div class="lightbox-body" onclick="event.stopPropagation()">
+            <button class="lb-arrow" onclick="lightboxNav(-1)">&#10094;</button>
             <img id="lightboxImg" src="" alt="Screenshot">
-            <p class="lightbox-counter" id="lightboxCounter"></p>
+            <button class="lb-arrow" onclick="lightboxNav(1)">&#10095;</button>
         </div>
-        <button class="lightbox-arrow lightbox-next" onclick="event.stopPropagation(); lightboxNav(1)">&#10095;</button>
+        <p class="lightbox-counter" id="lightboxCounter"></p>
     </div>
 
     <style>
-        /* Carousel */
-        .carousel-wrapper {
+        /* Force single-column layout for app-showcase on this page */
+        .app-showcase {
+            display: block !important;
+        }
+
+        /* Screenshot Carousel */
+        .ss-carousel {
             position: relative;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            width: 100%;
         }
-        .carousel-viewport {
+        .ss-viewport {
             overflow: hidden;
-            border-radius: 16px;
-            flex: 1;
-            min-width: 0;
+            border-radius: 12px;
+            width: 100%;
         }
-        .carousel-track {
+        .ss-track {
             display: flex;
-            gap: 14px;
+            gap: 16px;
             overflow-x: auto;
             scroll-snap-type: x mandatory;
             scroll-behavior: smooth;
             -webkit-overflow-scrolling: touch;
-            padding: 8px 4px 12px;
+            padding: 8px 0 16px;
             scrollbar-width: none;
         }
-        .carousel-track::-webkit-scrollbar { display: none; }
-        .carousel-track .phone-frame {
-            flex-shrink: 0;
-            width: 220px;
-            scroll-snap-align: center;
+        .ss-track::-webkit-scrollbar { display: none; }
+        .ss-track .ss-frame {
+            flex: 0 0 auto;
+            width: 230px;
+            height: 460px;
+            scroll-snap-align: start;
             border-radius: 20px;
             overflow: hidden;
             background: #1a1a2e;
-            border: 2px solid rgba(255,255,255,0.08);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            border: 2px solid rgba(255,255,255,0.06);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.25);
             cursor: pointer;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            transition: transform 0.2s ease;
         }
-        .carousel-track .phone-frame:hover {
-            transform: scale(1.03);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+        .ss-track .ss-frame:hover {
+            transform: scale(1.02);
         }
-        .carousel-track .phone-frame img {
-            width: 100%; height: auto; display: block;
+        .ss-track .ss-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
-        .carousel-arrow {
-            flex-shrink: 0;
-            width: 40px; height: 40px;
+        .ss-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            width: 44px;
+            height: 44px;
             border-radius: 50%;
-            border: 1px solid rgba(255,255,255,0.15);
-            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(10,10,20,0.75);
+            backdrop-filter: blur(8px);
             color: #fff;
             font-size: 18px;
             cursor: pointer;
-            display: flex; align-items: center; justify-content: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             transition: background 0.2s, border-color 0.2s;
-            backdrop-filter: blur(8px);
         }
-        .carousel-arrow:hover {
-            background: rgba(255,255,255,0.18);
-            border-color: rgba(255,255,255,0.3);
+        .ss-arrow:hover {
+            background: rgba(99,102,241,0.5);
+            border-color: rgba(99,102,241,0.6);
         }
+        .ss-prev { left: -12px; }
+        .ss-next { right: -12px; }
 
         /* Lightbox */
         .lightbox-overlay {
             display: none;
-            position: fixed; inset: 0;
+            position: fixed;
+            inset: 0;
             background: rgba(0,0,0,0.92);
             z-index: 10000;
-            align-items: center; justify-content: center;
-            gap: 16px;
+            align-items: center;
+            justify-content: center;
         }
-        .lightbox-overlay.active {
-            display: flex;
-        }
+        .lightbox-overlay.active { display: flex; }
         .lightbox-close {
             position: absolute; top: 20px; right: 28px;
             background: none; border: none; color: #fff;
-            font-size: 36px; cursor: pointer; z-index: 10001;
-            line-height: 1;
+            font-size: 36px; cursor: pointer; z-index: 10001; line-height: 1;
         }
         .lightbox-close:hover { color: #10b981; }
-        .lightbox-content {
-            max-width: 380px; max-height: 85vh;
-            display: flex; flex-direction: column; align-items: center;
+        .lightbox-body {
+            display: flex; align-items: center; gap: 20px;
+            max-width: 90vw;
         }
-        .lightbox-content img {
-            max-height: 80vh; width: auto; max-width: 100%;
+        .lightbox-body img {
+            max-height: 85vh; max-width: 380px; width: auto;
             border-radius: 24px;
-            box-shadow: 0 16px 64px rgba(0,0,0,0.6);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
         }
         .lightbox-counter {
-            margin-top: 12px; color: rgba(255,255,255,0.6);
-            font-size: 0.85rem;
+            position: absolute; bottom: 24px; left: 50%;
+            transform: translateX(-50%);
+            color: rgba(255,255,255,0.5); font-size: 0.85rem;
         }
-        .lightbox-arrow {
-            flex-shrink: 0;
-            width: 48px; height: 48px;
-            border-radius: 50%;
-            border: 1px solid rgba(255,255,255,0.2);
-            background: rgba(255,255,255,0.1);
-            color: #fff; font-size: 22px;
-            cursor: pointer;
+        .lb-arrow {
+            flex-shrink: 0; width: 48px; height: 48px; border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.08);
+            color: #fff; font-size: 22px; cursor: pointer;
             display: flex; align-items: center; justify-content: center;
             transition: background 0.2s;
         }
-        .lightbox-arrow:hover {
-            background: rgba(255,255,255,0.25);
-        }
+        .lb-arrow:hover { background: rgba(255,255,255,0.2); }
     </style>
 
     <script>
-        // Shared screenshot paths for lightbox
         let allScreenshots = [];
-        let currentLightboxIndex = 0;
+        let currentLbIdx = 0;
 
-        // Carousel scroll
-        function carouselScroll(galleryId, dir) {
-            const track = document.getElementById(galleryId);
-            const frameW = track.querySelector('.phone-frame')?.offsetWidth || 220;
-            track.scrollBy({ left: dir * (frameW + 14), behavior: 'smooth' });
+        function ssScroll(trackId, dir) {
+            const t = document.getElementById(trackId);
+            const w = t.querySelector('.ss-frame')?.offsetWidth || 230;
+            t.scrollBy({ left: dir * (w + 16), behavior: 'smooth' });
         }
 
-        // Lightbox
-        function openLightbox(index) {
-            currentLightboxIndex = index;
-            const overlay = document.getElementById('lightboxOverlay');
-            const img = document.getElementById('lightboxImg');
-            const counter = document.getElementById('lightboxCounter');
-            img.src = allScreenshots[index];
-            counter.textContent = (index + 1) + ' / ' + allScreenshots.length;
-            overlay.classList.add('active');
+        function openLightbox(i) {
+            currentLbIdx = i;
+            document.getElementById('lightboxImg').src = allScreenshots[i];
+            document.getElementById('lightboxCounter').textContent = (i+1)+' / '+allScreenshots.length;
+            document.getElementById('lightboxOverlay').classList.add('active');
             document.body.style.overflow = 'hidden';
         }
         function closeLightbox() {
@@ -316,10 +315,9 @@
             document.body.style.overflow = '';
         }
         function lightboxNav(dir) {
-            currentLightboxIndex = (currentLightboxIndex + dir + allScreenshots.length) % allScreenshots.length;
-            openLightbox(currentLightboxIndex);
+            currentLbIdx = (currentLbIdx + dir + allScreenshots.length) % allScreenshots.length;
+            openLightbox(currentLbIdx);
         }
-        // Keyboard navigation
         document.addEventListener('keydown', function(e) {
             if (!document.getElementById('lightboxOverlay').classList.contains('active')) return;
             if (e.key === 'Escape') closeLightbox();
@@ -327,9 +325,8 @@
             if (e.key === 'ArrowRight') lightboxNav(1);
         });
 
-        // Load screenshots
         (function() {
-            const gallery = document.getElementById('screenshotsGalleryApps');
+            const track = document.getElementById('ssTrackApps');
             const fallback = document.getElementById('fallbackImageApps');
             const names = [
                 '1-splash.jpg','2-home.jpg','3-settings-theme.jpg',
@@ -343,10 +340,10 @@
                 img.onload = function() {
                     allScreenshots.push(path);
                     const frame = document.createElement('div');
-                    frame.className = 'phone-frame';
+                    frame.className = 'ss-frame';
                     frame.onclick = function() { openLightbox(allScreenshots.indexOf(path)); };
                     frame.innerHTML = `<img src="${path}" alt="MedStock screenshot ${i+1}">`;
-                    gallery.appendChild(frame);
+                    track.appendChild(frame);
                     loaded++;
                     if (loaded === names.length) fallback.style.display = 'none';
                 };
@@ -354,7 +351,7 @@
                 img.src = path;
             });
             setTimeout(() => {
-                if (loaded === 0) { gallery.style.display = 'none'; fallback.style.display = 'block'; }
+                if (loaded === 0) { track.style.display='none'; fallback.style.display='block'; }
             }, 2000);
         })();
     </script>
