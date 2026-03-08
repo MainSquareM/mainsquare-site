@@ -148,16 +148,58 @@
                         </a>
                     </div>
 
-                    <!-- Screenshots Gallery with Horizontal Scroll -->
-                    <div style="margin-top: 3rem; max-width: 100%; overflow: hidden;">
+                    <!-- Screenshots Gallery - App Store Style -->
+                    <div style="margin-top: 3rem;">
                         <h3 style="margin-bottom: 1.5rem;" data-en="App Screenshots" data-pt="Screenshots da App">App Screenshots</h3>
-                        <div class="app-real-preview" style="max-width: 100%;">
+                        <div class="app-real-preview">
                             <img src="assets/apps/medstock/feature_graphic_1024x500.png" alt="MedStock official feature graphic" style="display: none;" id="fallbackImageApps">
-                            <div class="screenshots-gallery" id="screenshotsGalleryApps" style="display: flex; gap: 1rem; overflow-x: auto; padding-bottom: 0.75rem; scroll-behavior: smooth; max-width: 100%;">
+                            <div class="screenshots-gallery" id="screenshotsGalleryApps">
                                 <!-- Screenshots will be loaded here dynamically -->
                             </div>
                         </div>
                     </div>
+                    <style>
+                        #screenshotsGalleryApps {
+                            display: flex;
+                            gap: 16px;
+                            overflow-x: auto;
+                            scroll-snap-type: x mandatory;
+                            -webkit-overflow-scrolling: touch;
+                            padding: 8px 4px 16px;
+                            scrollbar-width: thin;
+                            scrollbar-color: rgba(255,255,255,0.25) transparent;
+                        }
+                        #screenshotsGalleryApps::-webkit-scrollbar {
+                            height: 6px;
+                        }
+                        #screenshotsGalleryApps::-webkit-scrollbar-track {
+                            background: transparent;
+                        }
+                        #screenshotsGalleryApps::-webkit-scrollbar-thumb {
+                            background: rgba(255,255,255,0.25);
+                            border-radius: 3px;
+                        }
+                        #screenshotsGalleryApps .phone-frame {
+                            flex-shrink: 0;
+                            width: 270px;
+                            scroll-snap-align: start;
+                            border-radius: 24px;
+                            overflow: hidden;
+                            background: #1a1a2e;
+                            border: 2px solid rgba(255,255,255,0.08);
+                            box-shadow: 0 8px 32px rgba(0,0,0,0.3), 0 2px 8px rgba(0,0,0,0.2);
+                            transition: transform 0.2s ease, box-shadow 0.2s ease;
+                        }
+                        #screenshotsGalleryApps .phone-frame:hover {
+                            transform: translateY(-4px);
+                            box-shadow: 0 12px 40px rgba(0,0,0,0.4), 0 4px 12px rgba(0,0,0,0.3);
+                        }
+                        #screenshotsGalleryApps .phone-frame img {
+                            width: 100%;
+                            height: auto;
+                            display: block;
+                        }
+                    </style>
                 </div>
             </div>
         </div>
@@ -187,8 +229,8 @@
                 
                 img.onload = function() {
                     const screenshotDiv = document.createElement('div');
-                    screenshotDiv.style.cssText = 'flex-shrink: 0; width: 200px; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1);';
-                    screenshotDiv.innerHTML = `<img src="${path}" alt="MedStock screenshot ${index + 1}" style="width: 200px; height: auto; display: block;">`;
+                    screenshotDiv.className = 'phone-frame';
+                    screenshotDiv.innerHTML = `<img src="${path}" alt="MedStock screenshot ${index + 1}">`;
                     gallery.appendChild(screenshotDiv);
                     loadedCount++;
                     
