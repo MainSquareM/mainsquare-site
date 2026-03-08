@@ -78,118 +78,156 @@
                     </div>
                 </div>
                 <div class="app-showcase-visual">
-                    <div class="app-real-preview">
-                        <img src="assets/apps/medstock/feature_graphic_1024x500.png" alt="MedStock official feature graphic" style="display: none;" id="fallbackImage">
-                        <div class="screenshots-gallery" id="screenshotsGallery">
-                            <!-- Screenshots will be loaded here dynamically -->
+                    <div class="carousel-wrapper">
+                        <button class="carousel-arrow carousel-prev" onclick="carouselScrollM('screenshotsGalleryM', -1)" aria-label="Previous">&#10094;</button>
+                        <div class="carousel-viewport">
+                            <img src="assets/apps/medstock/feature_graphic_1024x500.png" alt="MedStock official feature graphic" style="display: none;" id="fallbackImage">
+                            <div class="carousel-track" id="screenshotsGalleryM">
+                                <!-- Screenshots loaded dynamically -->
+                            </div>
                         </div>
+                        <button class="carousel-arrow carousel-next" onclick="carouselScrollM('screenshotsGalleryM', 1)" aria-label="Next">&#10095;</button>
                     </div>
-                    <p class="screenshots-hint" data-en="App screenshots gallery" data-pt="Galeria de screenshots da app" style="text-align: center; margin-top: 1rem; font-size: 0.9rem; color: rgba(255, 255, 255, 0.6);">App screenshots gallery</p>
-                    <style>
-                        #screenshotsGallery {
-                            display: flex;
-                            gap: 16px;
-                            overflow-x: auto;
-                            scroll-snap-type: x mandatory;
-                            -webkit-overflow-scrolling: touch;
-                            padding: 8px 4px 16px;
-                            scrollbar-width: thin;
-                            scrollbar-color: rgba(255,255,255,0.25) transparent;
-                        }
-                        #screenshotsGallery::-webkit-scrollbar {
-                            height: 6px;
-                        }
-                        #screenshotsGallery::-webkit-scrollbar-track {
-                            background: transparent;
-                        }
-                        #screenshotsGallery::-webkit-scrollbar-thumb {
-                            background: rgba(255,255,255,0.25);
-                            border-radius: 3px;
-                        }
-                        #screenshotsGallery .phone-frame {
-                            flex-shrink: 0;
-                            width: 270px;
-                            scroll-snap-align: start;
-                            border-radius: 24px;
-                            overflow: hidden;
-                            background: #1a1a2e;
-                            border: 2px solid rgba(255,255,255,0.08);
-                            box-shadow: 0 8px 32px rgba(0,0,0,0.3), 0 2px 8px rgba(0,0,0,0.2);
-                            transition: transform 0.2s ease, box-shadow 0.2s ease;
-                        }
-                        #screenshotsGallery .phone-frame:hover {
-                            transform: translateY(-4px);
-                            box-shadow: 0 12px 40px rgba(0,0,0,0.4), 0 4px 12px rgba(0,0,0,0.3);
-                        }
-                        #screenshotsGallery .phone-frame img {
-                            width: 100%;
-                            height: auto;
-                            display: block;
-                        }
-                    </style>
+                    <p class="screenshots-hint" data-en="Tap a screenshot to zoom" data-pt="Clique num screenshot para ampliar" style="text-align: center; margin-top: 1rem; font-size: 0.85rem; color: rgba(255, 255, 255, 0.5);">Tap a screenshot to zoom</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Lightbox overlay -->
+    <div class="lightbox-overlay" id="lightboxOverlayM" onclick="closeLightboxM()">
+        <button class="lightbox-close" onclick="closeLightboxM()">&times;</button>
+        <button class="lightbox-arrow lightbox-prev" onclick="event.stopPropagation(); lightboxNavM(-1)">&#10094;</button>
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            <img id="lightboxImgM" src="" alt="Screenshot">
+            <p class="lightbox-counter" id="lightboxCounterM"></p>
+        </div>
+        <button class="lightbox-arrow lightbox-next" onclick="event.stopPropagation(); lightboxNavM(1)">&#10095;</button>
+    </div>
+
+    <style>
+        .carousel-wrapper {
+            position: relative; display: flex; align-items: center; gap: 8px;
+        }
+        .carousel-viewport {
+            overflow: hidden; border-radius: 16px; flex: 1; min-width: 0;
+        }
+        .carousel-track {
+            display: flex; gap: 14px; overflow-x: auto;
+            scroll-snap-type: x mandatory; scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            padding: 8px 4px 12px; scrollbar-width: none;
+        }
+        .carousel-track::-webkit-scrollbar { display: none; }
+        .carousel-track .phone-frame {
+            flex-shrink: 0; width: 220px; scroll-snap-align: center;
+            border-radius: 20px; overflow: hidden; background: #1a1a2e;
+            border: 2px solid rgba(255,255,255,0.08);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .carousel-track .phone-frame:hover {
+            transform: scale(1.03); box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+        }
+        .carousel-track .phone-frame img { width: 100%; height: auto; display: block; }
+        .carousel-arrow {
+            flex-shrink: 0; width: 40px; height: 40px; border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.15);
+            background: rgba(255,255,255,0.08); color: #fff; font-size: 18px;
+            cursor: pointer; display: flex; align-items: center; justify-content: center;
+            transition: background 0.2s; backdrop-filter: blur(8px);
+        }
+        .carousel-arrow:hover { background: rgba(255,255,255,0.18); border-color: rgba(255,255,255,0.3); }
+        .lightbox-overlay {
+            display: none; position: fixed; inset: 0;
+            background: rgba(0,0,0,0.92); z-index: 10000;
+            align-items: center; justify-content: center; gap: 16px;
+        }
+        .lightbox-overlay.active { display: flex; }
+        .lightbox-close {
+            position: absolute; top: 20px; right: 28px;
+            background: none; border: none; color: #fff;
+            font-size: 36px; cursor: pointer; z-index: 10001; line-height: 1;
+        }
+        .lightbox-close:hover { color: #10b981; }
+        .lightbox-content {
+            max-width: 380px; max-height: 85vh;
+            display: flex; flex-direction: column; align-items: center;
+        }
+        .lightbox-content img {
+            max-height: 80vh; width: auto; max-width: 100%;
+            border-radius: 24px; box-shadow: 0 16px 64px rgba(0,0,0,0.6);
+        }
+        .lightbox-counter { margin-top: 12px; color: rgba(255,255,255,0.6); font-size: 0.85rem; }
+        .lightbox-arrow {
+            flex-shrink: 0; width: 48px; height: 48px; border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1);
+            color: #fff; font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center; transition: background 0.2s;
+        }
+        .lightbox-arrow:hover { background: rgba(255,255,255,0.25); }
+    </style>
+
     <script>
-        // Load screenshots from assets/apps/medstock/screenshots/
-        async function loadScreenshots() {
-            const gallery = document.getElementById('screenshotsGallery');
+        let allScreenshotsM = [];
+        let currentLbIndexM = 0;
+
+        function carouselScrollM(id, dir) {
+            const t = document.getElementById(id);
+            const w = t.querySelector('.phone-frame')?.offsetWidth || 220;
+            t.scrollBy({ left: dir * (w + 14), behavior: 'smooth' });
+        }
+        function openLightboxM(i) {
+            currentLbIndexM = i;
+            document.getElementById('lightboxImgM').src = allScreenshotsM[i];
+            document.getElementById('lightboxCounterM').textContent = (i+1)+' / '+allScreenshotsM.length;
+            document.getElementById('lightboxOverlayM').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLightboxM() {
+            document.getElementById('lightboxOverlayM').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        function lightboxNavM(dir) {
+            currentLbIndexM = (currentLbIndexM + dir + allScreenshotsM.length) % allScreenshotsM.length;
+            openLightboxM(currentLbIndexM);
+        }
+        document.addEventListener('keydown', function(e) {
+            if (!document.getElementById('lightboxOverlayM').classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightboxM();
+            if (e.key === 'ArrowLeft') lightboxNavM(-1);
+            if (e.key === 'ArrowRight') lightboxNavM(1);
+        });
+
+        (function() {
+            const gallery = document.getElementById('screenshotsGalleryM');
             const fallback = document.getElementById('fallbackImage');
-            
-            // List of expected screenshot files (in order)
-            const screenshotNames = [
-                '1-splash.jpg',
-                '2-home.jpg', 
-                '3-settings-theme.jpg',
-                '4-settings-language.jpg',
-                '5-first-aid.jpg',
-                '6-todays-doses.jpg',
-                '7-medicine-details.jpg'
+            const names = [
+                '1-splash.jpg','2-home.jpg','3-settings-theme.jpg',
+                '4-settings-language.jpg','5-first-aid.jpg',
+                '6-todays-doses.jpg','7-medicine-details.jpg'
             ];
-            
-            let loadedCount = 0;
-            
-            screenshotNames.forEach((name, index) => {
+            let loaded = 0;
+            names.forEach((name, i) => {
                 const img = new Image();
                 const path = `assets/apps/medstock/screenshots/${name}`;
-                
                 img.onload = function() {
-                    const screenshotDiv = document.createElement('div');
-                    screenshotDiv.className = 'phone-frame';
-                    screenshotDiv.innerHTML = `<img src="${path}" alt="MedStock screenshot ${index + 1}">`;
-                    gallery.appendChild(screenshotDiv);
-                    loadedCount++;
-                    
-                    if (loadedCount === screenshotNames.length) {
-                        fallback.style.display = 'none';
-                    }
+                    allScreenshotsM.push(path);
+                    const frame = document.createElement('div');
+                    frame.className = 'phone-frame';
+                    frame.onclick = function() { openLightboxM(allScreenshotsM.indexOf(path)); };
+                    frame.innerHTML = `<img src="${path}" alt="MedStock screenshot ${i+1}">`;
+                    gallery.appendChild(frame);
+                    loaded++;
+                    if (loaded === names.length) fallback.style.display = 'none';
                 };
-                
-                img.onerror = function() {
-                    // Image not found, skip it
-                };
-                
+                img.onerror = function() {};
                 img.src = path;
             });
-            
-            // If no screenshots found after 2 seconds, show fallback
             setTimeout(() => {
-                if (loadedCount === 0) {
-                    gallery.style.display = 'none';
-                    fallback.style.display = 'block';
-                    document.querySelector('.screenshots-hint').innerHTML = '<span data-en="Feature graphic. Add app screenshots to assets/apps/medstock/screenshots/" data-pt="Gráfico da loja. Adiciona screenshots da app a assets/apps/medstock/screenshots/">Feature graphic. Add app screenshots to assets/apps/medstock/screenshots/</span>';
-                }
+                if (loaded === 0) { gallery.style.display = 'none'; fallback.style.display = 'block'; }
             }, 2000);
-        }
-        
-        // Load screenshots when page loads
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', loadScreenshots);
-        } else {
-            loadScreenshots();
-        }
+        })();
     </script>
 
     <footer class="footer">
