@@ -149,11 +149,11 @@
                     </div>
 
                     <!-- Screenshots Gallery with Horizontal Scroll -->
-                    <div style="margin-top: 3rem;">
+                    <div style="margin-top: 3rem; max-width: 100%; overflow: hidden;">
                         <h3 style="margin-bottom: 1.5rem;" data-en="App Screenshots" data-pt="Screenshots da App">App Screenshots</h3>
-                        <div class="app-real-preview">
+                        <div class="app-real-preview" style="max-width: 100%;">
                             <img src="assets/apps/medstock/feature_graphic_1024x500.png" alt="MedStock official feature graphic" style="display: none;" id="fallbackImageApps">
-                            <div class="screenshots-gallery" id="screenshotsGalleryApps" style="display: flex; gap: 1.5rem; overflow-x: auto; padding-bottom: 1rem; scroll-behavior: smooth;">
+                            <div class="screenshots-gallery" id="screenshotsGalleryApps" style="display: flex; gap: 1rem; overflow-x: auto; padding-bottom: 0.75rem; scroll-behavior: smooth; max-width: 100%;">
                                 <!-- Screenshots will be loaded here dynamically -->
                             </div>
                         </div>
@@ -187,8 +187,8 @@
                 
                 img.onload = function() {
                     const screenshotDiv = document.createElement('div');
-                    screenshotDiv.style.cssText = 'flex-shrink: 0; min-width: 240px; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1);';
-                    screenshotDiv.innerHTML = `<img src="${path}" alt="MedStock screenshot ${index + 1}" style="width: 100%; height: auto; display: block;">`;
+                    screenshotDiv.style.cssText = 'flex-shrink: 0; width: 200px; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1);';
+                    screenshotDiv.innerHTML = `<img src="${path}" alt="MedStock screenshot ${index + 1}" style="width: 200px; height: auto; display: block;">`;
                     gallery.appendChild(screenshotDiv);
                     loadedCount++;
                     
