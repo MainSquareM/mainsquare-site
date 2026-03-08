@@ -1136,12 +1136,79 @@ ul {
 }
 
 /* ==============================================
+   Page-Specific Layouts
+   ============================================== */
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.content-grid.align-start {
+    align-items: start;
+}
+
+.content-grid.mb-80 {
+    margin-bottom: 80px;
+}
+
+.decorative-box {
+    height: 400px;
+    border-radius: var(--radius-xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-heading {
+    font-size: 2.5rem;
+    margin-bottom: 24px;
+}
+
+.year-display {
+    font-size: 5rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.6));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ==============================================
    Responsive Design
    ============================================== */
 
 @media (max-width: 1024px) {
     .hero-title {
         font-size: 3rem;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .decorative-box {
+        height: 280px;
+    }
+
+    .about-heading {
+        font-size: 2rem;
+    }
+
+    .year-display {
+        font-size: 4rem;
     }
     
     .cta-card {
@@ -1202,6 +1269,18 @@ ul {
 
     .hero-brand img {
         height: 80px;
+    }
+
+    .decorative-box {
+        height: 220px;
+    }
+
+    .about-heading {
+        font-size: 1.8rem;
+    }
+
+    .year-display {
+        font-size: 3rem;
     }
 }
 

@@ -250,6 +250,18 @@
         .ss-prev { left: -12px; }
         .ss-next { right: -12px; }
 
+        @media (max-width: 640px) {
+            .ss-prev { left: 4px; }
+            .ss-next { right: 4px; }
+            .ss-track .ss-frame {
+                width: 180px;
+                height: 360px;
+            }
+            .lightbox-body img {
+                max-width: 90vw;
+            }
+        }
+
         /* Lightbox */
         .lightbox-overlay {
             display: none;
