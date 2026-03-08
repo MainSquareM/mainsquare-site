@@ -292,14 +292,14 @@ ul {
 }
 
 .hero-brand {
-    margin-bottom: 20px;
+    margin-bottom: 32px;
 }
 
 .hero-brand img {
-    height: 72px;
+    height: 110px;
     width: auto;
     margin: 0 auto;
-    filter: drop-shadow(0 10px 24px rgba(99, 102, 241, 0.35));
+    filter: drop-shadow(0 12px 32px rgba(99, 102, 241, 0.45)) drop-shadow(0 4px 12px rgba(99, 102, 241, 0.25));
 }
 
 .hero-badge {
@@ -1201,7 +1201,7 @@ ul {
     }
 
     .hero-brand img {
-        height: 58px;
+        height: 80px;
     }
 }
 
