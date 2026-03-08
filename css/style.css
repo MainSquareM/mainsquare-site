@@ -47,6 +47,9 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    overflow-x: clip;
 }
 
 body {
@@ -56,7 +59,8 @@ body {
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden;
+    overflow-x: clip;
+    width: 100%;
 }
 
 a {
@@ -105,9 +109,11 @@ ul {
     font-weight: 600;
     color: var(--color-text-secondary);
     cursor: pointer;
-    padding: 4px 8px;
+    padding: 8px 12px;
     border-radius: 12px;
     transition: var(--transition);
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 }
 
 .lang-btn.active {
@@ -175,6 +181,7 @@ ul {
     color: var(--color-text-secondary);
     position: relative;
     transition: var(--transition);
+    -webkit-tap-highlight-color: transparent;
 }
 
 .nav-links a:hover,
@@ -205,7 +212,13 @@ ul {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 8px;
+    padding: 12px;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
 }
 
 .nav-menu-btn span {
@@ -214,6 +227,18 @@ ul {
     background: var(--color-text);
     border-radius: 2px;
     transition: var(--transition);
+}
+
+.nav-menu-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-menu-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
 }
 
 /* --- Hero Section --- */
@@ -400,6 +425,8 @@ ul {
     cursor: pointer;
     border: none;
     text-align: center;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 }
 
 .btn-primary {
@@ -438,6 +465,7 @@ ul {
 .section {
     padding: 100px 0;
     position: relative;
+    overflow-x: clip;
 }
 
 .section-header {
@@ -488,7 +516,7 @@ ul {
 /* --- Features Grid --- */
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
     gap: 28px;
 }
 
@@ -645,6 +673,7 @@ ul {
     padding: 160px 0 80px;
     text-align: center;
     position: relative;
+    overflow: clip;
 }
 
 .page-header::before {
@@ -653,11 +682,13 @@ ul {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     height: 600px;
     background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
     filter: blur(60px);
     z-index: 0;
+    pointer-events: none;
 }
 
 .header-content {
@@ -848,7 +879,7 @@ ul {
 .legal-links-grid {
     margin-top: 28px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
     gap: 14px;
 }
 
@@ -1002,7 +1033,7 @@ ul {
 /* --- Coming Soon Section --- */
 .coming-soon-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
     gap: 28px;
 }
 
@@ -1069,6 +1100,7 @@ ul {
     background: var(--color-surface);
     padding: 80px 0 32px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    overflow-x: clip;
 }
 
 .footer-grid {
@@ -1261,6 +1293,22 @@ ul {
     .app-showcase {
         padding: 40px 28px;
     }
+
+    .cta-card {
+        padding: 50px 28px;
+    }
+
+    .cta-content h2 {
+        font-size: 2rem;
+    }
+
+    .cta-alt-content {
+        padding: 50px 28px;
+    }
+
+    .cta-alt-content h2 {
+        font-size: 2rem;
+    }
     
     .footer-grid {
         grid-template-columns: 1fr;
@@ -1331,6 +1379,38 @@ ul {
         transform: none;
         width: 240px;
         height: 480px;
+    }
+
+    .cta-card {
+        padding: 40px 20px;
+    }
+
+    .cta-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .cta-alt-content {
+        padding: 40px 20px;
+    }
+
+    .cta-alt-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .cta-alt-content p {
+        font-size: 1rem;
+    }
+
+    .app-showcase {
+        padding: 28px 16px;
+    }
+
+    .header-content h1 {
+        font-size: 2rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.6rem;
     }
 }
 

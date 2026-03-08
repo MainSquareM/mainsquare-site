@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0a0a0f">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="description" content="Our Apps — Explore the mobile applications created by Main Square.">
     <title>Our Apps — Main Square</title>
     <link rel="stylesheet" href="css/style.css">
@@ -91,7 +94,7 @@
                                 <path d="M9 11L12 14L22 4" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M21 12V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H16" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
-                            <span data-en="Complete history and reports" data-pt="Histórico completo de tomas">Complete doses history</span>
+                            <span data-en="Complete history and reports" data-pt="Histórico completo e relatórios">Complete history and reports</span>
                         </div>
                         <div class="feature-item">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -250,15 +253,37 @@
         .ss-prev { left: -12px; }
         .ss-next { right: -12px; }
 
-        @media (max-width: 640px) {
+        @media (max-width: 768px) {
             .ss-prev { left: 4px; }
             .ss-next { right: 4px; }
             .ss-track .ss-frame {
                 width: 180px;
                 height: 360px;
             }
+            .lightbox-body {
+                position: relative;
+                max-width: 85vw;
+                justify-content: center;
+            }
             .lightbox-body img {
-                max-width: 90vw;
+                max-width: 85vw;
+                max-height: 80vh;
+            }
+            .lb-arrow {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 40px;
+                height: 40px;
+                z-index: 10;
+                background: rgba(0,0,0,0.6);
+                backdrop-filter: blur(4px);
+            }
+            .lb-arrow:first-child {
+                left: 8px;
+            }
+            .lb-arrow:last-child {
+                right: 8px;
             }
         }
 
@@ -271,6 +296,7 @@
             z-index: 10000;
             align-items: center;
             justify-content: center;
+            overflow: hidden;
         }
         .lightbox-overlay.active { display: flex; }
         .lightbox-close {
@@ -282,6 +308,7 @@
         .lightbox-body {
             display: flex; align-items: center; gap: 20px;
             max-width: 90vw;
+            position: relative;
         }
         .lightbox-body img {
             max-height: 85vh; max-width: 380px; width: auto;
@@ -377,7 +404,7 @@
             <div class="coming-soon-grid">
                 <div class="coming-soon-card">
                     <div class="coming-soon-icon">🚀</div>
-                    <h3 data-en="ProductivityTools" data-pt="Ferramentas de Produtividade">Productivity Tools</h3>
+                    <h3 data-en="Productivity Tools" data-pt="Ferramentas de Produtividade">Productivity Tools</h3>
                     <p data-en="Simple, effective tools to boost your daily productivity." data-pt="Ferramentas simples e eficazes para aumentar a produtividade diária.">Simple, effective tools to boost your daily productivity.</p>
                 </div>
                 <div class="coming-soon-card">
