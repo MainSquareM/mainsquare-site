@@ -150,73 +150,12 @@
                 </div>
                 <div class="app-showcase-visual">
                     <div class="app-real-preview">
-                        <img src=\"assets/apps/medstock/feature_graphic_1024x500.png\" alt=\"MedStock official feature graphic\" style=\"display: none;\" id=\"fallbackImageApps\">
-                        <div class=\"screenshots-gallery\" id=\"screenshotsGalleryApps\" style=\"display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; width: 100%; aspect-ratio: auto;\">
-                            <!-- Screenshots will be loaded here dynamically -->
-                        </div>
+                        <img src="assets/apps/medstock/feature_graphic_1024x500.png" alt="MedStock official feature graphic">
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <script>
-        // Load screenshots from assets/apps/medstock/screenshots/ for apps.html
-        async function loadScreenshotsApps() {
-            const gallery = document.getElementById('screenshotsGalleryApps');
-            const fallback = document.getElementById('fallbackImageApps');
-            
-            const screenshotNames = [
-                '1-splash.jpg',
-                '2-home.jpg', 
-                '3-settings-theme.jpg',
-                '4-settings-language.jpg',
-                '5-first-aid.jpg',
-                '6-todays-doses.jpg',
-                '7-medicine-details.jpg'
-            ];
-            
-            let loadedCount = 0;
-            
-            screenshotNames.forEach((name, index) => {
-                const img = new Image();
-                const path = `assets/apps/medstock/screenshots/${name}`;
-                
-                img.onload = function() {
-                    const screenshotDiv = document.createElement('div');
-                    screenshotDiv.style.cssText = 'border-radius: 8px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1);';
-                    screenshotDiv.innerHTML = `<img src=\"${path}\" alt=\"MedStock screenshot ${index + 1}\" style=\"width: 100%; height: auto; display: block;\">`;
-                    gallery.appendChild(screenshotDiv);
-                    loadedCount++;
-                    
-                    if (loadedCount === screenshotNames.length) {
-                        fallback.style.display = 'none';
-                    }
-                };
-                
-                img.onerror = function() {
-                    // Image not found, skip it
-                };
-                
-                img.src = path;
-            });
-            
-            // If no screenshots found after 2 seconds, show fallback
-            setTimeout(() => {
-                if (loadedCount === 0) {
-                    gallery.style.display = 'none';
-                    fallback.style.display = 'block';
-                }
-            }, 2000);
-        }
-        
-        // Load screenshots when page loads
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', loadScreenshotsApps);
-        } else {
-            loadScreenshotsApps();
-        }
-    </script>
 
     <!-- Coming Soon Section -->
     <section class="section coming-soon-section">
