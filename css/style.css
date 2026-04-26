@@ -795,8 +795,38 @@ ul {
 
 .app-platforms {
     display: flex;
-    gap: 12px;
+    gap: 24px;
     margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.store-download-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.store-badge {
+    height: 48px;
+    width: auto;
+    display: block;
+    transition: opacity 0.2s, transform 0.15s;
+}
+
+.store-badge:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+}
+
+.store-qr {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #fff;
+    padding: 4px;
+    display: block;
 }
 
 .platform-pill {
