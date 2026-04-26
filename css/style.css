@@ -87,7 +87,7 @@ ul {
 /* --- Language Toggle --- */
 .lang-toggle {
     position: fixed;
-    top: 24px;
+    top: 14px;
     right: 24px;
     z-index: 1001;
     display: flex;
@@ -1397,6 +1397,11 @@ a.platform-pill:hover {
         padding: 40px 28px;
     }
 
+    .app-status {
+        top: 40px;
+        right: 28px;
+    }
+
     .cta-card {
         padding: 50px 28px;
     }
@@ -1460,6 +1465,7 @@ a.platform-pill:hover {
     
     .lang-toggle {
         right: 80px;
+        top: 14px;
     }
     
     .hero {
@@ -1506,6 +1512,11 @@ a.platform-pill:hover {
 
     .app-showcase {
         padding: 28px 16px;
+    }
+
+    .app-status {
+        top: 28px;
+        right: 16px;
     }
 
     .header-content h1 {
