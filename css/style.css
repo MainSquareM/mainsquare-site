@@ -722,6 +722,7 @@ ul {
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: var(--radius-xl);
     align-items: center;
+    position: relative;
 }
 
 .app-showcase.featured {
@@ -853,7 +854,9 @@ a.platform-pill:hover {
 }
 
 .app-status {
-    margin-bottom: 28px;
+    position: absolute;
+    top: 60px;
+    right: 60px;
 }
 
 .status-badge {
