@@ -795,7 +795,7 @@ ul {
 
 .app-platforms {
     display: flex;
-    gap: 24px;
+    gap: 56px;
     margin-bottom: 24px;
     flex-wrap: wrap;
 }
@@ -808,8 +808,8 @@ ul {
 }
 
 .store-badge {
-    height: 48px;
-    width: auto;
+    width: 144px;
+    height: auto;
     display: block;
     transition: opacity 0.2s, transform 0.15s;
 }
@@ -820,8 +820,8 @@ ul {
 }
 
 .store-qr {
-    width: 100px;
-    height: 100px;
+    width: 144px;
+    height: 144px;
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     background: #fff;
