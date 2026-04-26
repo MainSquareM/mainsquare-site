@@ -798,6 +798,7 @@ ul {
     gap: 56px;
     margin-bottom: 24px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .store-download-group {
