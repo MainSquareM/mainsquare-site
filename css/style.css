@@ -794,11 +794,10 @@ ul {
 }
 
 .app-platforms {
-    display: flex;
-    gap: 56px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+    gap: 14px;
     margin-bottom: 24px;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
 .store-download-group {
