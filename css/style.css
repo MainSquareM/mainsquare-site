@@ -730,12 +730,13 @@ ul {
 }
 
 .app-badge {
-    display: inline-block;
-    font-size: 0.75rem;
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.85rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    padding: 6px 16px;
+    padding: 8px 16px;
     background: var(--gradient-primary);
     color: #ffffff;
     border-radius: 20px;
